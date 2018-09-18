@@ -1,0 +1,224 @@
+// /**************************************************
+// Grid mixins 
+// v.1.7
+// ***************************************************/
+// SCSS CSS Grid 
+
+
+////
+/// This is a poster comment.
+/// It will apply annotations to all items from file.
+/// @author Michael Koch
+/// @group Grid
+////
+
+
+/// Default variable to write/read check if root
+/// grid container exist.
+/// Feel very free to override in other files.
+/// @author Michael Koch
+$gridcontainer-exists: false !default;
+
+
+/// Mixin to define a grid container
+/// @author Michael Koch
+/// @param {Column specs} $col-spec - Number of columns and spec
+/// @param {Row specs} $row-spec [null] - Number of rows and spec. For no row parse null.
+@mixin is-grid-container($col-spec, $row-spec: null) {
+    
+    display: grid;
+    @if $row-spec==null {
+        grid-template-columns: unquote(inspect($col-spec));
+    }@else {
+        grid-template-columns: unquote(inspect($col-spec));
+        grid-template-rows: unquote(inspect($row-spec));
+    }
+    
+    // Check if a root grid container exist
+    @if $gridcontainer-exists == false {
+        // Set up box model for root grid container
+        box-sizing: border-box;
+
+        // Make all child elements inherit the box model
+        & *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+        $gridcontainer-exists: true !global;
+    }
+    @content;
+}
+
+/// Shorthand mixin to define a grid container
+/// @author Michael Koch
+/// @param {Column specs} $col-spec - Number of columns and spec
+/// @param {Row specs} $row-spec [null] - Number of rows and spec. For no row parse null.
+/// @alias is-grid-container
+@mixin igc($col-spec, $row-spec: null) {
+    @include is-grid-container($col-spec, $row-spec);
+    @content;
+}
+
+/// Mixin to make a grid container class
+/// @author Michael Koch
+/// @param {string} $selector - Selector to make. e.g class, ID, type etc.
+/// @param {Column specs} $col-spec - Number of columns and spec
+/// @param {Row specs} $row-spec [null] - Number of rows and spec. For no row parse null.
+@mixin make-grid-container($selector, $col-spec, $row-spec: null) {
+    @if type-of($selector) !=string {
+        @warn '1st parameter should be a selector name (e.g: .container), and therefore a string.';
+    }
+
+    #{$selector} {
+        @include is-grid-container($col-spec, $row-spec) {
+            @content;
+        }
+    }
+}
+
+/// Shorthand mixin to make a grid container class
+/// @author Michael Koch
+/// @param {string} $selector - Selector to make. e.g class, ID, type etc.
+/// @param {Column specs} $col-spec - Number of columns and spec
+/// @param {Row specs} $row-spec [null] - Number of rows and spec. For no row parse null.
+/// @alias make-grid-container
+@mixin mgc($selector, $col-spec, $row-spec: null) {
+    @include make-grid-container($selector, $col-spec, $row-spec) {
+        @content;
+    }
+}
+
+/// Mixin to define a grid item
+/// @author Michael Koch
+/// @param {Column span} $col-span - Row placement in outer grid
+/// @param {Row span} $row-span [null] - Column placement in outer grid. For no row parse null.
+@mixin is-grid-item($col-span, $row-span: null) {
+    @if $row-span==null {
+        grid-column: unquote(inspect($col-span));
+    } @else {
+        grid-column: unquote(inspect($col-span));
+        grid-row: unquote(inspect($row-span));
+    }
+    @content;
+}
+
+/// Shorthand mixin to define a grid item
+/// @author Michael Koch
+/// @param {Column span} $col-span - Row placement in outer grid
+/// @param {Row span} $row-span [null] - Column placement in outer grid. For no row parse null.
+/// @alias is-grid-item
+@mixin igi($col-span, $row-span: null) {
+    @include is-grid-item($col-span, $row-span);
+    @content;
+}
+
+/// Mixin to make a grid item
+/// @author Michael Koch
+/// @param {string} $selector - Selector to make. e.g class, ID, type etc.
+/// @param {Column span} $col-span - Row placement in outer grid
+/// @param {Row span} $row-span [null] - Column placement in outer grid. For no row parse null.
+@mixin make-grid-itam($selector, $col-span, $row-span: null) {
+    @if type-of($selector) !=string {
+        @warn '1st parameter should be a selector name (e.g: .container), and therefore a string.';
+    }
+
+    #{$selector} {
+        @include is-grid-item($col-span, $row-span) {
+            @content;
+        }
+    }
+}
+
+/// Shorthand mixin to make a grid item
+/// @author Michael Koch
+/// @param {Column span} $col-span - Row placement in outer grid
+/// @param {Row span} $row-span [null] - Column placement in outer grid. For no row parse null.
+/// @alias make-grid-itam
+@mixin mgi($selector, $col-span, $row-span: null) {
+    @include make-grid-itam($selector, $col-span, $row-span) {
+        @content;
+    }
+}
+
+/// Mixin to define a sub grid container
+/// @author Michael Koch
+/// @param {Column span} $col-span - Column placement in outer grid
+/// @param {Row span} $row-span - Row placement in outer grid
+/// @param {Column specs} $row-spec - Number of column and spec in inner grid.
+/// @param {Row specs} $row-spec [null] - Number of rows and spec in inner grid. For no row parse null.
+@mixin is-sub-grid-container($col-span, $row-span, $col-spec, $row-spec: null) {
+    @include is-grid-container($col-spec, $row-spec);
+    @include is-grid-item($col-span, $row-span);
+    @content;
+}
+
+/// Shorthand mixin to define a sub grid container
+/// @author Michael Koch
+/// @param {Column span} $col-span - Column placement in outer grid
+/// @param {Row span} $row-span - Row placement in outer grid
+/// @param {Column specs} $row-spec - Number of column and spec in inner grid.
+/// @param {Row specs} $row-spec [null] - Number of rows and spec in inner grid. For no row parse null.
+/// @alias is-sub-grid-container
+@mixin isgc($col-span, $row-span, $col-spec, $row-spec: null) {
+    @include is-sub-grid-container($col-span, $row-span, $col-spec, $row-spec);
+    @content;
+}
+
+/// Mixin to make a sub grid container class
+/// @author Michael Koch
+/// @param {string} $selector - Selector to make. e.g class, ID, type etc.
+/// @param {Column span} $col-span - Column placement in outer grid
+/// @param {Row span} $row-span - Row placement in outer grid
+/// @param {Column specs} $row-spec - Number of column and spec in inner grid.
+/// @param {Row specs} $row-spec [null] - Number of rows and spec in inner grid. For no row parse null.
+@mixin make-sub-grid-container($selector, $col-span, $row-span, $col-spec, $row-spec: null) {
+    @include make-grid-itam($selector, $col-span, $row-span) {
+        @include is-grid-container($col-spec, $row-spec) {
+            @content;
+        }
+    }
+}
+
+/// Shorthand mixin to make a sub grid container class
+/// @author Michael Koch
+/// @param {string} $selector - Selector to make. e.g class, ID, type etc.
+/// @param {Column span} $col-span - Column placement in outer grid
+/// @param {Row span} $row-span - Row placement in outer grid
+/// @param {Column specs} $row-spec - Number of column and spec in inner grid.
+/// @param {Row specs} $row-spec [null] - Number of rows and spec in inner grid. For no row parse null.
+/// @alias make-sub-grid-container
+@mixin msgc($selector, $col-span, $row-span, $col-spec, $row-spec: null) {
+    @include make-sub-grid-container($selector, $col-span, $row-span, $col-spec, $row-spec) {
+        @content;
+    }
+}
+
+$grid-index: (  
+    2tm: 899, 
+    2tl: 1, 
+    dropdown: 210,
+    navigation: 205,
+    main-header: 200,
+    gridcontainer: 90,
+    teaser: 60,
+    info-text: 50, 
+    bg-image: 40, 
+    test3: 'span 4', 
+    test: '1 / 13', 
+    test1: '1 / 55', 
+    test2: '1 / 14'
+) !default;
+
+@function get-grid($key) {
+    // @return unquote(map-get($grid-index, $key));
+    @if not map-has-key($grid-index, $key) {
+        // @warn "Key `#{$key}` not found. Keys are: '#{map-keys($map: $z-index)}"; // My compiler doesn't care for warnings, throw error.
+        @error 'Key `#{$key}` not found. Keys are: '#{map-keys($map: $grid-index)}'';
+    }
+    @return unquote(inspect(map-get($grid-index, $key)));
+}
+
+@mixin get-grid($key) {
+    grid-column: get-grid($key);
+}

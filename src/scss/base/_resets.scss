@@ -1,0 +1,128 @@
+$debug: false !default;
+
+// Check for dead links during development
+@mixin debug($debug: $debug) {
+    @if $debug {
+        @content;
+    }
+}
+
+@include debug {
+    a[href='#'] {
+        background-color: red;
+        border: 1px red;
+        box-shadow: 0px 0px 10px 0px red;
+    }
+}
+
+html {
+    $min-width: $tablet-width;
+    $max-width: $dekstop-width;
+    $min-font: 14px;
+    $max-font: 19px;
+    @include fluid-font($min-width, $max-width, $min-font, $max-font);
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+    @if not $debug {
+        user-zoom: fixed;
+    }
+}
+
+*, 
+:before, 
+:after {
+    box-sizing: inherit;
+    // box-sizing: inherit;
+}
+
+ul {
+    margin: 0;
+    list-style: none;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: $main-font;
+    color: get-color(tri3);
+    // font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    
+    // font-smooth: auto;
+
+    @if not $debug {
+        // user-zoom: fixed;    
+        /* Prevent native touch events on Windows */
+        -moz-text-size-adjust: none;
+        -moz-user-select: none;
+        -ms-text-size-adjust: none;
+        -ms-touch-action: none;
+        -ms-user-select: none;
+        -o-text-size-adjust: none;
+        -webkit-text-size-adjust: none;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        text-size-adjust: none;
+        
+        /* Prevent text resize on orientation change, useful for web-apps */
+        user-select: none;
+    
+        /* Prevent the callout on tap-hold and text selection */
+    
+    }
+}
+
+%main-font {
+    font-family: $main-font;
+}
+
+@for $i from 1 through 6 {
+    h#{$i} {
+        // font-family: $main-font;
+        @extend %main-font;
+    }
+}
+
+a {
+    &:not(:hover) {
+        color: get-color(tri3);
+        text-decoration: none; // text-decoration-color: var(--tc-grey);
+    }
+
+    &:hover {
+        color: get-color(tri3);
+        // text-decoration: none;
+    }
+}
+
+code {
+    font-family: monospace;
+}
+
+figure {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+
+    img {
+        width: 100%;
+        height: auto;
+        padding: 0;
+        margin: 0;
+        object-fit: contain;
+        object-position: center;
+    }
+}
+
+p {
+    font-weight: 300;
+    color: get-color(tri3);
+}
+
+.row {
+    @extend %row;
+}

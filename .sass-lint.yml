@@ -1,0 +1,68 @@
+#########################
+## Sample Sass Lint File
+#########################
+# Linter Options
+options:
+  # Don't merge default rules
+  merge-default-rules: false
+  # Set the formatter to 'html'
+  # formatter: html
+  # Output file instead of logging results
+  # output-file: 'linters/sass-lint.html'
+  # Raise an error if more than 50 warnings are generated
+  # max-warnings: 50
+# File Options
+files:
+  include: 'src/scss/**/*.s+(a|c)ss'
+  ignore:
+    - 'src/scss/vendor/**/*.*'
+    - 'src/scss/abstracts/**/*.*'
+# Rule Configuration
+rules:
+  quotes: ''
+  url-quotes: true
+  bem-depth: 
+    - 1
+    - max-depth: 3
+  class-name-format:
+    - 1
+    # - convention: hyphenatedlowercase
+    - convention: hyphenatedbem
+  force-pseudo-nesting: 1
+  extends-before-mixins: 1
+  extends-before-declarations: 1
+  placeholder-in-extend: 0
+  mixins-before-declarations: 0
+  space-before-brace: 
+    - 1
+  # no-warn: 0
+  no-debug: 1
+  no-ids: 2
+  no-important: 2
+  no-empty-rulesets: 1
+  hex-notation:
+    - 1
+    -
+      style: uppercase
+  space-after-comma: 1
+  space-after-colon: 1
+  space-around-operator:
+    - 1
+    - include: true
+  indentation:
+    - 1
+    -
+      size: 4
+  property-sort-order:
+    - 0
+    -
+      order: recess
+        # - display
+        # - margin
+      ignore-custom-properties: true
+  variable-for-property:
+    - 0
+    -
+      properties:
+        - margin
+        - content

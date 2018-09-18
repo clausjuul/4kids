@@ -1,0 +1,48 @@
+@function strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
+    @return $number;
+}
+
+@function px2rem($px, $root-px: 16) {
+    $value: strip-unit($px);
+    $root-value: strip-unit($root-px);
+    @return $value / $root-value + rem;
+}
+
+@function converter($val, $mp-val: 1, $mp: 1, $unit: null) {
+    $value: strip-unit($val);
+    $divider: strip-unit($mp-val);
+    @if $unit == null {
+        $unit: '';
+    }
+
+    @if $divider == 0 {
+        $divider: 1
+    }
+
+    @if $divider < 0 {
+        @return unquote($value / $divider + $unit);
+    } @else {
+        @return unquote($value * $divider + $unit);
+    }
+}
+
+@function to-unit($val, $unit: null) {
+    // @if type-of($unit) not 'string' and {
+    @if $unit and unitless($val) and type-of($val) == 'number' {
+        // @return strip-unit($val) + #{$unit};
+        @return unquote(strip-unit($val) + $unit);
+    }
+    
+    @return $val;
+}
+
+@mixin square-element($size) {
+    @if ($size == null) or (type-of($size) != number) {
+        @warn 'should be a number';
+    } 
+    max-width: $size; 
+    min-height: $size;
+}
