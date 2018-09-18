@@ -215,7 +215,7 @@ gulp.task('sitemap', function () {
             read: false
         })
         .pipe(sitemap({
-            siteUrl: 'http://www.ubuntu-conference-copenhagen.dk'
+            siteUrl: 'http://www.4kids.dk'
         }))
         .pipe(gulp.dest('./dist'));
 });

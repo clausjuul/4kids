@@ -1,7 +1,7 @@
 {
-  "name": "ubuntu-conference",
+  "name": "4kids",
   "version": "1.0.0",
-  "description": "Ubuntu Conference",
+  "description": "4kids website",
   "main": "index.js",
   "scripts": {
     "start": "gulp"
