@@ -9,11 +9,10 @@
 // Mixins
 @import 'abstracts/mixins/grid';
 @import 'abstracts/mixins/grid-claus-edition';
-@import 'abstracts/mixins/mqs';
 @import 'abstracts/mixins/typography';
 
 // Variables
-@import 'vars';
+@import 'abstracts/variables/variables';
 
 // Placeholders
 @import 'abstracts/placeholders/placeholders';

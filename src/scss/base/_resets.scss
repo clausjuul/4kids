@@ -17,7 +17,7 @@ $debug: false !default;
 
 html {
     $min-width: $tablet-width;
-    $max-width: $dekstop-width;
+    $max-width: $desktop-width;
     $min-font: 14px;
     $max-font: 19px;
     @include fluid-font($min-width, $max-width, $min-font, $max-font);
