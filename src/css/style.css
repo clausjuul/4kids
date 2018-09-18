@@ -305,7 +305,7 @@ body {
   margin: 0;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Ubuntu";
   color: #111;
   text-rendering: optimizeLegibility;
   /* Prevent native touch events on Windows */
@@ -325,7 +325,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Ubuntu";
 }
 
 a:not(:hover) {
