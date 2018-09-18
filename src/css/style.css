@@ -362,6 +362,12 @@ p {
   color: #111;
 }
 
+.nav {
+  background: Red;
+  padding-bottom: 20px;
+  clip-path: url(#navClip);
+}
+
 /* #region 
 */
 
