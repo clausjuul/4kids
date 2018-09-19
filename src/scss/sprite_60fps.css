@@ -1,0 +1,36 @@
+
+
+@keyframes playMenu {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -4320px 0px;
+  }
+}
+
+@keyframes playMenuReverse {
+  0% {
+    background-position: -4320px 0px;
+  }
+  100% {
+    background-position: 0px 0px;
+  }
+
+}
+.toggleMenu {
+  animation-duration: 500ms;
+  animation-timing-function: steps(48);
+  animation-fill-mode: forwards;
+  width: 90px;
+  height: 60px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.playMenu {
+  animation-name: playMenu;  
+}
+.playMenuReverse {
+  animation-name: playMenuReverse;
+}
+

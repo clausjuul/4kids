@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="sprite_60fps.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="toggleMenu" id="toggleMenu" style="background-image: url(sprite_60fps.svg)"></div>
+
+
+
+  <script>
+    document.getElementById('toggleMenu').addEventListener('click', function () {
+
+      if (!this.classList.contains('playMenu')) {
+        this.classList.add('playMenu');
+        this.classList.remove('playMenuReverse');
+      } else {
+        this.classList.add('playMenuReverse');
+        this.classList.remove('playMenu');
+      }
+
+    });
+  </script>
+</body>
+
+</html>
