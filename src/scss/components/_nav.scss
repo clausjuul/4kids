@@ -91,14 +91,7 @@ body {
     font-size: px2rem(20px);
     text-align: left;
 
-    @include media('>desktop') {
-        // animation-name: move-down-appear;
-        // bottom: unset;
-        // left:calc(0% - #{px2rem(-(85px * 2))});
-        // left: px2rem(85px * 2);
-        // top: 10%;
-        // top: px2rem(100px - 40px);
-    }
+ 
 
 
 
@@ -145,7 +138,7 @@ body {
         }
 
         @for $i from 1 through $menu-items {
-            @if not $i==($menu-items / 2 + 1) {
+            @if not $i == ($menu-items / 2 + 1) {
                 &:nth-child(#{$i}) {
                     transition-duration: 200ms;
                 }
@@ -203,7 +196,7 @@ body {
         transition-timing-function: cubic-bezier(0.480, -0.600, 0.345, 1.295);
         /* custom */
         @for $i from 1 through $menu-items + 1 {
-            @if $i <=($menu-items / 2) {
+            @if $i <= ($menu-items / 2) {
                 &:nth-child(#{$i}) { 
                     /* left */
                     
@@ -220,10 +213,10 @@ body {
             }
 
             @else {
-                @if $i>($menu-items / 2 + 1) {
+                @if $i > ($menu-items / 2 + 1) {
                     &:nth-child(#{$i}) {
                         /* right */
-                        transition-duration: 250ms + (80ms*($i - 1));
+                        transition-duration: 250ms + (80ms * ($i - 1));
                         // transform: translate3d(px2rem($menu-item-size * ($i - ($menu-items / 2 + 1))), px2rem((10px * ($i - ($menu-items / 2 + 1))) - 10px), 0);
                         @if $start-at-menu {
                             transform: translate3d(px2rem(($menu-item-size + $menu-item-gap) * ($i - ($menu-items / 2 + 1))), 
@@ -242,7 +235,9 @@ body {
     .navbar__open-button {
         // transition-timing-function: cubic-bezier(0.480, -0.600, 0.515, 1.580);
         /* custom */
-                transition-timing-function: cubic-bezier(0.480, -0.600, 0.515, 1.580); /* custom */
+        transition-timing-function: cubic-bezier(0.480, -0.600, 0.515, 1.580); /* custom */
+        // transition-timing-function: cubic-bezier(0.1, -0.1, 0.345, 1.295);
+
 
         transition-duration: 400ms;
         // transform:scale(0.8,0.8) translate3d(0,0,0);
@@ -258,7 +253,7 @@ body {
                 transform: translate3d(0, 0, 0) rotate(45deg);
             }
     
-            &:nth-child(2){
+            &:nth-child(2) {
                 transform: translate3d(0, 0, 0) scale(0.1, 1);
             }
     

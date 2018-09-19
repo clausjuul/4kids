@@ -16,8 +16,8 @@ $debug: false !default;
 }
 
 html {
-    $min-width: $tablet-width;
-    $max-width: $desktop-width;
+    $min-width: getBp('tablet');
+    $max-width: getBp('desktop');
     $min-font: 14px;
     $max-font: 19px;
     @include fluid-font($min-width, $max-width, $min-font, $max-font);
@@ -102,10 +102,6 @@ a {
     color: inherit;
 }
 
-code {
-    // font-family: monospace;
-}
-
 figure {
     width: 100%;
     height: auto;
@@ -125,8 +121,4 @@ figure {
 p {
     font-weight: 300;
     color: get-color(tri3);
-}
-
-.row {
-    @extend %row;
 }

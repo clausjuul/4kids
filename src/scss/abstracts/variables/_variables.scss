@@ -11,22 +11,7 @@
 // SCSS VARS_____________________
 //
 // Fonts and fallbacks
-// $main-font: 'Open Sans', sans-serif;
-$main-font: 'Ubuntu';
-// Widths for mediaqueries
-$tablet-width: 600px;   // below is phone. 
-// between is tablet.
-$desktop-width: 1024px; // above is desktop 
-
-$retina-width: 2100px;  // above is retina
-
-$mq-buffer: 1px; // buffer between mq'ssans-serif;
-// $main-font: 'Raleway', sans-serif;
-// $main-font: 'Roboto', sans-serif;
-// $main-font: 'Lobster', sans-serif;
-// $main-font: 'Monoton', sans-serif;
-
-// $main-font: system-ui, sans-serif;
+$main-font: 'Open Sans', sans-serif;
 
 // Core Colors.
 // tc = Theme Color;
@@ -70,14 +55,6 @@ $nav-height: px2rem(100px);
     }
 }
 
-// Widths for mediaqueries
-$tablet-width: 600px;   // below is phone. 
-// between is tablet.
-$desktop-width: 1024px; // above is desktop 
-
-$retina-width: 2100px;  // above is retina
-
-$mq-buffer: 1px; // buffer between mq's
 
 $breakpoints: (
     'phone': 300px,
