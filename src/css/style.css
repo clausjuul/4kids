@@ -423,8 +423,7 @@ p {
   flex-direction: column;
 }
 
-.footer__nav ul li {
-  padding: 0.5rem 1rem;
+.footer__nav ul a {
   background: red;
   display: inline-block;
 }
