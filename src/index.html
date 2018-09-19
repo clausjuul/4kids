@@ -8,20 +8,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="css/gooey.css"> -->
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 </head>
 
 <body>
-  <nav class="nav">
-    <ul>
+  
+  <nav class="main-nav">
+    <ul class="navbar">
       <li><a href="#">Produkter</a></li>
       <li><a href="#">Udsalg</a></li>
       <li><a href="#">Outlet</a></li>
-    </ul>
-    <ul>
-      <li>Logo</li>
-    </ul>
-    <ul>
+      <li class="logo">Logo</li>
       <li><a href="#">FAQ</a></li>
       <li><a href="#">Kundeservice</a></li>
       <li><a href="#">Log ind</a></li>
@@ -30,20 +28,45 @@
 
 
 
+  <div class="filler">
 
-
+  </div>
 
 
 
 <!-- NAVIGATION CLIPPATH -->
-<svg width="0" height="0">
-    <defs>
-      <clipPath id="navClip" clipPathUnits="objectBoundingBox">
-        <path d="M0,0 1,0 1,0.9 C 1,0.9, 0.77,1, 0.5,1 0.23,1, 0,0.9,0,0.9z"/>
-      </clipPath>
-    </defs>
+    <svg width="0" height="0">
+      <defs>
+        <clipPath id="navClip" clipPathUnits="objectBoundingBox">
+          <path d="M0,0 1,0 1,0.9 C 1,0.9, 0.77,1, 0.5,1 0.23,1, 0,0.9,0,0.9z"/>
+        </clipPath>
+      </defs>
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="0" height="0">
+      <defs>
+
+        <filter id="shadowed-goo">
+            
+            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+            <feGaussianBlur in="goo" stdDeviation="15" result="shadow" />
+            <feColorMatrix in="shadow" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 -0.2" result="shadow" />
+            <feOffset in="shadow" dx="0" dy="0" result="shadow" />
+            <feComposite in2="shadow" in="goo" result="goo" />
+            <feComposite in2="goo" in="SourceGraphic" result="mix" />
+        </filter>
+
+        <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+            <feComposite in2="goo" in="SourceGraphic" result="mix" />
+        </filter>
+
+      </defs>
   </svg>
 
+    <script src="js/nav.js"></script>
 
 </body>
 

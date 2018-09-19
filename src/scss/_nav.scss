@@ -1,7 +1,153 @@
+$fg: #bada55;
+// $bg:#009688;
+$bg:#333;
+//$open-distance:105px;
+$menu-items: 6;
+
+$menu-item-size: 80px;
+
+%ball {
+    background: $fg;
+    border-radius: 100%;
+    // width: px2rem(80px);
+    // height: px2rem(80px);
+    width: px2rem($menu-item-size);
+    height: px2rem($menu-item-size);
+    position: absolute;
+    color: white;
+    text-align: center;
+    // line-height: px2rem(80px);
+    line-height: px2rem($menu-item-size);
+    transform: translate3d(0, 0, 0);
+    transition: transform 150ms;
+    transition-timing-function: cubic-bezier(0.480, -0.600, 0.345, 1.295);
+    /* custom */
+}
+
+
 .nav {
     background: Red;
     // min-height: 100px;
     padding-bottom: 20px;
-  clip-path: url(#navClip);
-  }
-  
+    clip-path: url(#navClip);
+}
+
+.main-nav {
+    margin: 10px 0;
+    padding: 0;
+    // width: 100%;
+
+    height: px2rem($menu-item-size * 1.5);
+}
+
+.navbar {
+    height: auto;
+    display: inline-block;
+    // width: px2rem($menu-item-size * $menu-items);
+    // width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: calc(50% - #{px2rem($menu-item-size / 2)});
+    // top: px2rem(90px);
+    // left: 50%;
+    // position: fixed;
+    // bottom: 100%;
+    // top: -40px;
+    // bottom: px2rem(30px);
+    // left:50%;
+    // transform: translate(0,55px);
+    filter: url('#shadowed-goo');
+    // z-index: 300;  
+
+
+    opacity: 1;
+    box-sizing: border-box;
+    font-size: px2rem(20px);
+    text-align: left;
+
+    @include media('>desktop') {
+        // animation-name: move-down-appear;
+        // bottom: unset;
+        // left:calc(0% - #{px2rem(-(85px * 2))});
+        // left: px2rem(85px * 2);
+        // top: 10%;
+        // top: px2rem(100px - 40px);
+    }
+
+
+
+    li {
+        @extend %ball;
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+        // transition-timing-function: cubic-bezier(0.480, -0.600, 0.515, 1.580); /* custom */
+
+        @for $i from 1 through $menu-items {
+            @if not $i==($menu-items / 2 + 1) {
+                &:nth-child(#{$i}) {
+                    transition-duration: 200ms;
+                }
+            }
+        }
+    }
+
+
+
+    .logo {
+        @extend %ball;
+        z-index: 200;
+        // transition-timing-function:cubic-bezier(0.175, 0.885, 0.320, 1.275);
+        transition-timing-function: cubic-bezier(0.480, -0.600, 0.515, 1.580);
+        /* custom */
+        transition-duration: 400ms;
+        // transform:scale(1.1,1.1) translate3d(0,0,0);
+        cursor: pointer;
+    }
+
+    //   @at-root {
+
+    // }
+}
+
+
+// $real-menu-items: $menu-items + 1;
+.navbar--open {
+    li {
+        transition-timing-function: cubic-bezier(0.480, -0.600, 0.345, 1.295);
+
+        /* custom */
+        @for $i from 1 through $menu-items+1 {
+            @if $i <=($menu-items / 2) {
+                &:nth-child(#{$i}) {
+                    /* left */
+                    transition-duration: 250ms + (80ms * abs(($i + 0) - ($menu-items + 1)));
+                    transform: translate3d(px2rem($menu-item-size * (($i - 1 + $menu-items / 2) - $menu-items)), px2rem(-(10px * (($i - 1 + $menu-items / 2) - $menu-items))), 0);
+                }
+            }
+
+            @else {
+                @if $i>($menu-items / 2 + 1) {
+                    &:nth-child(#{$i}) {
+                        /* right */
+                        transition-duration: 250ms + (80ms*($i - 1));
+                        transform: translate3d(px2rem($menu-item-size * ($i - ($menu-items / 2 + 1))), px2rem((10px * ($i - ($menu-items / 2 + 1)))), 0);
+                    }
+                }
+            }
+        }
+    }
+
+    .logo {
+        transition-timing-function: cubic-bezier(0.480, -0.600, 0.515, 1.580);
+        /* custom */
+        transition-duration: 200ms;
+        // transform:scale(0.8,0.8) translate3d(0,0,0);
+        // transform:scale(0.85,0.85) translate3d(0, px2rem(-10px),0);
+        transform: scale(0.85, 0.85) translate3d(0, 0, 0);
+        background: #00f;
+
+        // &:hover {
+        //   color: red;
+        // }
+    }
+}

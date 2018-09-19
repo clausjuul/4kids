@@ -98,8 +98,12 @@ a {
     }
 }
 
+a { 
+    color: inherit;
+}
+
 code {
-    font-family: monospace;
+    // font-family: monospace;
 }
 
 figure {
