@@ -13,20 +13,35 @@
 // }
 
 var navbar = document.querySelector(".navbar");
-var trigger = document.querySelector(".logo")
+var trigger = document.querySelector(".navbar__open-button")
 
 // document.getElementById("mobile-menu").onclick = function () {
 trigger.onclick = function () {
 
     if (!navbar.classList.contains("navbar--open")) {
         navbar.classList.add("navbar--open");
-
+        trigger.classList.add('playMenu');
+        trigger.classList.remove('playMenuReverse');
 
     } else {
 
         navbar.classList.remove("navbar--open");
+        trigger.classList.add('playMenuReverse');
+        trigger.classList.remove('playMenu');
     }
 }
+
+// document.getElementById('toggleMenu').addEventListener('click', function () {
+
+//     if (!this.classList.contains('playMenu')) {
+//       this.classList.add('playMenu');
+//       this.classList.remove('playMenuReverse');
+//     } else {
+//       this.classList.add('playMenuReverse');
+//       this.classList.remove('playMenu');
+//     }
+
+//   });
 
 // function overlay() {
 //     if (body.classList.contains("toggle-menu")) {

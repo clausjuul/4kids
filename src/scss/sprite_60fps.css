@@ -22,9 +22,9 @@
   animation-duration: 500ms;
   animation-timing-function: steps(48);
   animation-fill-mode: forwards;
+  background-repeat: no-repeat;
   width: 90px;
   height: 60px;
-  background-repeat: no-repeat;
   cursor: pointer;
 }
 .playMenu {

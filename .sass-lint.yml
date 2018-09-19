@@ -41,7 +41,7 @@ rules:
   no-important: 2
   no-empty-rulesets: 1
   hex-notation:
-    - 1
+    - 0
     -
       style: uppercase
   space-after-comma: 1

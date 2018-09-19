@@ -1,13 +1,29 @@
-$fg: #bada55;
-// $bg:#009688;
-$bg:#333;
-//$open-distance:105px;
+$menu-color: #bada55;
+
+$menu-active-color: #fada77;
+
+$burger-color: white;
+
 $menu-items: 6;
 
 $menu-item-size: 80px;
 
+$menu-item-gap: 0px;
+
+$pix-dir: 10px;
+
+$start-at-menu: false;
+
+body {
+    background: #999
+}
+
+.filler {
+    height: 100vh;
+}
+
 %ball {
-    background: $fg;
+    background-color: $menu-color;
     border-radius: 100%;
     // width: px2rem(80px);
     // height: px2rem(80px);
@@ -16,8 +32,7 @@ $menu-item-size: 80px;
     position: absolute;
     color: white;
     text-align: center;
-    // line-height: px2rem(80px);
-    line-height: px2rem($menu-item-size);
+    left: calc(50% - #{px2rem($menu-item-size / 2)});
     transform: translate3d(0, 0, 0);
     transition: transform 150ms;
     transition-timing-function: cubic-bezier(0.480, -0.600, 0.345, 1.295);
@@ -25,43 +40,53 @@ $menu-item-size: 80px;
 }
 
 
-.nav {
-    background: Red;
-    // min-height: 100px;
-    padding-bottom: 20px;
-    clip-path: url(#navClip);
-}
-
 .main-nav {
-    margin: 10px 0;
+    margin: 50px 0;
     padding: 0;
     // width: 100%;
-
+    position: fixed;
+    width: 100%;
+    // bottom: 0;
     height: px2rem($menu-item-size * 1.5);
+
+    // $min-width: $tablet-width;
+    // $max-width: $desktop-width;
+    // $min-font: 12px;
+    // $max-font: 20px;
+    // @include fluid-font($min-width, $max-width, $min-font, $max-font);
+
+    @include media('>desktop') {
+        bottom: unset;
+    }
 }
 
 .navbar {
+    
     height: auto;
     display: inline-block;
-    // width: px2rem($menu-item-size * $menu-items);
+    width: px2rem($menu-item-size * ($menu-items + 1));
     // width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
     position: relative;
-    left: calc(50% - #{px2rem($menu-item-size / 2)});
+    // left: calc(50% - #{px2rem(($menu-item-size * $menu-items + 1) / 2)});
+    left: 50%;
+    transform: translateX(-50%);
+
     // top: px2rem(90px);
     // left: 50%;
+    // transform: translate(-50%, 0);
     // position: fixed;
     // bottom: 100%;
     // top: -40px;
     // bottom: px2rem(30px);
     // left:50%;
-    // transform: translate(0,55px);
     filter: url('#shadowed-goo');
     // z-index: 300;  
 
 
-    opacity: 1;
+    // opacity: 1;
     box-sizing: border-box;
     font-size: px2rem(20px);
     text-align: left;
@@ -81,6 +106,43 @@ $menu-item-size: 80px;
         @extend %ball;
         transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275);
         // transition-timing-function: cubic-bezier(0.480, -0.600, 0.515, 1.580); /* custom */
+        word-break: break-all;
+        display: flex;
+
+        a {
+            // line-height: 100%;
+            justify-self: center;
+            align-self: center;
+            width: 100%;
+            text-align: center;
+        }
+
+        span {
+            $width: 25px;
+            $height: 3px;
+            width: px2rem($width);
+            height: px2rem($height);
+            background: $burger-color;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: px2rem(-$width/2);
+            margin-top: px2rem(-$height/2);
+            transition: transform 200ms;
+
+            &:nth-child(1) {
+                transform: translate3d(0, px2rem(-8px), 0);
+            }
+
+            &:nth-child(2) {
+                transform: translate3d(0, 0, 0);
+            }
+
+            &:nth-child(3) {
+                transform: translate3d(0, px2rem(8px), 0);
+            }
+        }
 
         @for $i from 1 through $menu-items {
             @if not $i==($menu-items / 2 + 1) {
@@ -91,37 +153,69 @@ $menu-item-size: 80px;
         }
     }
 
-
-
-    .logo {
-        @extend %ball;
-        z-index: 200;
-        // transition-timing-function:cubic-bezier(0.175, 0.885, 0.320, 1.275);
-        transition-timing-function: cubic-bezier(0.480, -0.600, 0.515, 1.580);
-        /* custom */
-        transition-duration: 400ms;
-        // transform:scale(1.1,1.1) translate3d(0,0,0);
-        cursor: pointer;
-    }
-
-    //   @at-root {
-
-    // }
 }
 
+// .logo {
+.navbar__open-button {
+    @extend %ball;
+    // transition-timing-function:cubic-bezier(0.175, 0.885, 0.320, 1.275);
+    z-index: 200;
+    transition-timing-function: cubic-bezier(0.480, -0.600, 0.515, 1.580);
+    /* custom */
+    transition-duration: 400ms;
+    // transform:scale(1.1,1.1) translate3d(0,0,0);
+    cursor: pointer;
+    line-height: 100%;
+}
+
+// .playMenu {
+//     background-color: $menu-active-color;
+
+//     svg {
+
+//         path#top,
+//         path#bottom {
+//             stroke-dashoffset: -650px;
+//             stroke-dashoffset: -650px;
+//         }
+
+//         path#middle {
+//             stroke-dashoffset: -115px;
+//             stroke-dasharray: 1px 220px;
+//         }
+//     }
+// }
+
+
+@keyframes playMenu {
+    0% {
+        background-position: 0px 0px;
+    }
+
+    100% {
+        background-position: -4320px 0px;
+    }
+}
 
 // $real-menu-items: $menu-items + 1;
 .navbar--open {
     li {
         transition-timing-function: cubic-bezier(0.480, -0.600, 0.345, 1.295);
-
         /* custom */
-        @for $i from 1 through $menu-items+1 {
+        @for $i from 1 through $menu-items + 1 {
             @if $i <=($menu-items / 2) {
-                &:nth-child(#{$i}) {
+                &:nth-child(#{$i}) { 
                     /* left */
+                    
                     transition-duration: 250ms + (80ms * abs(($i + 0) - ($menu-items + 1)));
-                    transform: translate3d(px2rem($menu-item-size * (($i - 1 + $menu-items / 2) - $menu-items)), px2rem(-(10px * (($i - 1 + $menu-items / 2) - $menu-items))), 0);
+                    // transform: translate3d(px2rem($menu-item-size * (($i - 1 + $menu-items / 2) - $menu-items)), px2rem(-((10px * (($i - 1 + $menu-items / 2) - $menu-items) + 10px))), 0);
+                    @if $start-at-menu {
+                        transform: translate3d(px2rem(($menu-item-size + $menu-item-gap) * (($i - 1 + $menu-items / 2) - $menu-items)), 
+                        px2rem(-(($pix-dir * (($i - 1 + $menu-items / 2) - $menu-items) + $pix-dir))), 0);
+                    } @else {
+                        transform: translate3d(px2rem(($menu-item-size + $menu-item-gap) * (($i - 1 + $menu-items / 2) - $menu-items)), 
+                        px2rem(-(($pix-dir * (($i - 1 + $menu-items / 2) - $menu-items)))), 0);
+                    }
                 }
             }
 
@@ -130,24 +224,47 @@ $menu-item-size: 80px;
                     &:nth-child(#{$i}) {
                         /* right */
                         transition-duration: 250ms + (80ms*($i - 1));
-                        transform: translate3d(px2rem($menu-item-size * ($i - ($menu-items / 2 + 1))), px2rem((10px * ($i - ($menu-items / 2 + 1)))), 0);
+                        // transform: translate3d(px2rem($menu-item-size * ($i - ($menu-items / 2 + 1))), px2rem((10px * ($i - ($menu-items / 2 + 1))) - 10px), 0);
+                        @if $start-at-menu {
+                            transform: translate3d(px2rem(($menu-item-size + $menu-item-gap) * ($i - ($menu-items / 2 + 1))), 
+                            px2rem(($pix-dir * ($i - ($menu-items / 2 + 1))) - $pix-dir), 0);
+                        } @else {
+                            transform: translate3d(px2rem(($menu-item-size + $menu-item-gap) * ($i - ($menu-items / 2 + 1))), 
+                            px2rem(($pix-dir * ($i - ($menu-items / 2 + 1)))), 0);
+                        }
                     }
                 }
             }
         }
     }
 
-    .logo {
-        transition-timing-function: cubic-bezier(0.480, -0.600, 0.515, 1.580);
+    // .logo {
+    .navbar__open-button {
+        // transition-timing-function: cubic-bezier(0.480, -0.600, 0.515, 1.580);
         /* custom */
-        transition-duration: 200ms;
+                transition-timing-function: cubic-bezier(0.480, -0.600, 0.515, 1.580); /* custom */
+
+        transition-duration: 400ms;
         // transform:scale(0.8,0.8) translate3d(0,0,0);
         // transform:scale(0.85,0.85) translate3d(0, px2rem(-10px),0);
         transform: scale(0.85, 0.85) translate3d(0, 0, 0);
-        background: #00f;
+        background: $menu-active-color;
 
         // &:hover {
         //   color: red;
         // }
+        span {
+            &:nth-child(1) {
+                transform: translate3d(0, 0, 0) rotate(45deg);
+            }
+    
+            &:nth-child(2){
+                transform: translate3d(0, 0, 0) scale(0.1, 1);
+            }
+    
+            &:nth-child(3) {
+                transform: translate3d(0, 0, 0) rotate(-45deg);
+            }
+        }
     }
 }
