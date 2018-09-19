@@ -1,57 +1,85 @@
 @font-face {
-  font-family: Ubuntu;
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: 100;
+  src: local("Roboto Thin Italic"),local(Roboto-ThinItalic),url(//fonts.gstatic.com/s/roboto/v18/KFOiCnqEu92Fr1Mu51QrEzAdKw.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v18/KFOiCnqEu92Fr1Mu51QrEzAdLw.woff2) format("woff2"),url(//fonts.gstatic.com/s/roboto/v18/KFOiCnqEu92Fr1Mu51QrEzAdKQ.woff) format("woff");
+}
+
+@font-face {
+  font-family: Roboto;
   font-style: italic;
   font-weight: 300;
-  src: local("Ubuntu Light Italic"),local(Ubuntu-LightItalic),url(//fonts.gstatic.com/s/ubuntu/v11/4iCp6KVjbNBYlgoKejZftVyPN4U.eot?#) format("eot"),url(//fonts.gstatic.com/s/ubuntu/v11/4iCp6KVjbNBYlgoKejZftVyPN4E.woff2) format("woff2"),url(//fonts.gstatic.com/s/ubuntu/v11/4iCp6KVjbNBYlgoKejZftVyPN4c.woff) format("woff");
+  src: local("Roboto Light Italic"),local(Roboto-LightItalic),url(//fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51TjASc6CsA.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51TjASc6CsQ.woff2) format("woff2"),url(//fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51TjASc6CsI.woff) format("woff");
 }
 
 @font-face {
-  font-family: Ubuntu;
+  font-family: Roboto;
   font-style: italic;
   font-weight: 400;
-  src: local("Ubuntu Italic"),local(Ubuntu-Italic),url(//fonts.gstatic.com/s/ubuntu/v11/4iCu6KVjbNBYlgoKej70l00.eot?#) format("eot"),url(//fonts.gstatic.com/s/ubuntu/v11/4iCu6KVjbNBYlgoKej70l0k.woff2) format("woff2"),url(//fonts.gstatic.com/s/ubuntu/v11/4iCu6KVjbNBYlgoKej70l08.woff) format("woff");
+  src: local("Roboto Italic"),local(Roboto-Italic),url(//fonts.gstatic.com/s/roboto/v18/KFOkCnqEu92Fr1Mu51xIIzY.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v18/KFOkCnqEu92Fr1Mu51xIIzI.woff2) format("woff2"),url(//fonts.gstatic.com/s/roboto/v18/KFOkCnqEu92Fr1Mu51xIIzQ.woff) format("woff");
 }
 
 @font-face {
-  font-family: Ubuntu;
+  font-family: Roboto;
   font-style: italic;
   font-weight: 500;
-  src: local("Ubuntu Medium Italic"),local(Ubuntu-MediumItalic),url(//fonts.gstatic.com/s/ubuntu/v11/4iCp6KVjbNBYlgoKejYHtFyPN4U.eot?#) format("eot"),url(//fonts.gstatic.com/s/ubuntu/v11/4iCp6KVjbNBYlgoKejYHtFyPN4E.woff2) format("woff2"),url(//fonts.gstatic.com/s/ubuntu/v11/4iCp6KVjbNBYlgoKejYHtFyPN4c.woff) format("woff");
+  src: local("Roboto Medium Italic"),local(Roboto-MediumItalic),url(//fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51S7ACc6CsA.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51S7ACc6CsQ.woff2) format("woff2"),url(//fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51S7ACc6CsI.woff) format("woff");
 }
 
 @font-face {
-  font-family: Ubuntu;
+  font-family: Roboto;
   font-style: italic;
   font-weight: 700;
-  src: local("Ubuntu Bold Italic"),local(Ubuntu-BoldItalic),url(//fonts.gstatic.com/s/ubuntu/v11/4iCp6KVjbNBYlgoKejZPslyPN4U.eot?#) format("eot"),url(//fonts.gstatic.com/s/ubuntu/v11/4iCp6KVjbNBYlgoKejZPslyPN4E.woff2) format("woff2"),url(//fonts.gstatic.com/s/ubuntu/v11/4iCp6KVjbNBYlgoKejZPslyPN4c.woff) format("woff");
+  src: local("Roboto Bold Italic"),local(Roboto-BoldItalic),url(//fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51TzBic6CsA.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51TzBic6CsQ.woff2) format("woff2"),url(//fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51TzBic6CsI.woff) format("woff");
 }
 
 @font-face {
-  font-family: Ubuntu;
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: 900;
+  src: local("Roboto Black Italic"),local(Roboto-BlackItalic),url(//fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51TLBCc6CsA.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51TLBCc6CsQ.woff2) format("woff2"),url(//fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51TLBCc6CsI.woff) format("woff");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 100;
+  src: local("Roboto Thin"),local(Roboto-Thin),url(//fonts.gstatic.com/s/roboto/v18/KFOkCnqEu92Fr1MmgVxIIzY.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v18/KFOkCnqEu92Fr1MmgVxIIzI.woff2) format("woff2"),url(//fonts.gstatic.com/s/roboto/v18/KFOkCnqEu92Fr1MmgVxIIzQ.woff) format("woff");
+}
+
+@font-face {
+  font-family: Roboto;
   font-style: normal;
   font-weight: 300;
-  src: local("Ubuntu Light"),local(Ubuntu-Light),url(//fonts.gstatic.com/s/ubuntu/v11/4iCv6KVjbNBYlgoC1CzjsGyJ.eot?#) format("eot"),url(//fonts.gstatic.com/s/ubuntu/v11/4iCv6KVjbNBYlgoC1CzjsGyN.woff2) format("woff2"),url(//fonts.gstatic.com/s/ubuntu/v11/4iCv6KVjbNBYlgoC1CzjsGyL.woff) format("woff");
+  src: local("Roboto Light"),local(Roboto-Light),url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc8.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc4.woff2) format("woff2"),url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc-.woff) format("woff");
 }
 
 @font-face {
-  font-family: Ubuntu;
+  font-family: Roboto;
   font-style: normal;
   font-weight: 400;
-  src: local("Ubuntu Regular"),local(Ubuntu-Regular),url(//fonts.gstatic.com/s/ubuntu/v11/4iCs6KVjbNBYlgoKfw7y.eot?#) format("eot"),url(//fonts.gstatic.com/s/ubuntu/v11/4iCs6KVjbNBYlgoKfw72.woff2) format("woff2"),url(//fonts.gstatic.com/s/ubuntu/v11/4iCs6KVjbNBYlgoKfw7w.woff) format("woff");
+  src: local(Roboto),local(Roboto-Regular),url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxO.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxK.woff2) format("woff2"),url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxM.woff) format("woff");
 }
 
 @font-face {
-  font-family: Ubuntu;
+  font-family: Roboto;
   font-style: normal;
   font-weight: 500;
-  src: local("Ubuntu Medium"),local(Ubuntu-Medium),url(//fonts.gstatic.com/s/ubuntu/v11/4iCv6KVjbNBYlgoCjC3jsGyJ.eot?#) format("eot"),url(//fonts.gstatic.com/s/ubuntu/v11/4iCv6KVjbNBYlgoCjC3jsGyN.woff2) format("woff2"),url(//fonts.gstatic.com/s/ubuntu/v11/4iCv6KVjbNBYlgoCjC3jsGyL.woff) format("woff");
+  src: local("Roboto Medium"),local(Roboto-Medium),url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBBc8.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBBc4.woff2) format("woff2"),url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBBc-.woff) format("woff");
 }
 
 @font-face {
-  font-family: Ubuntu;
+  font-family: Roboto;
   font-style: normal;
   font-weight: 700;
-  src: local("Ubuntu Bold"),local(Ubuntu-Bold),url(//fonts.gstatic.com/s/ubuntu/v11/4iCv6KVjbNBYlgoCxCvjsGyJ.eot?#) format("eot"),url(//fonts.gstatic.com/s/ubuntu/v11/4iCv6KVjbNBYlgoCxCvjsGyN.woff2) format("woff2"),url(//fonts.gstatic.com/s/ubuntu/v11/4iCv6KVjbNBYlgoCxCvjsGyL.woff) format("woff");
+  src: local("Roboto Bold"),local(Roboto-Bold),url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBBc8.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBBc4.woff2) format("woff2"),url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBBc-.woff) format("woff");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  src: local("Roboto Black"),local(Roboto-Black),url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmYUtfBBc8.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmYUtfBBc4.woff2) format("woff2"),url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmYUtfBBc-.woff) format("woff");
 }
 
 @font-face {
@@ -268,6 +296,7 @@ Root vars. STANDARD FONTS AND COLORS
 }
 
 html {
+  line-height: 1.5;
   box-sizing: border-box;
   scroll-behavior: smooth;
   user-zoom: fixed;
@@ -305,7 +334,7 @@ body {
   margin: 0;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: "Ubuntu";
+  font-family: "Roboto", sans-serif;
   color: #111;
   text-rendering: optimizeLegibility;
   /* Prevent native touch events on Windows */
@@ -325,7 +354,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Ubuntu";
+  font-family: "Roboto", sans-serif;
 }
 
 a:not(:hover) {
@@ -368,7 +397,36 @@ p {
   clip-path: url(#navClip);
 }
 
-/* #region 
-*/
+.footer {
+  display: grid;
+  grid-gap: 2.2rem;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  padding: 2.2rem;
+  background: steelblue;
+}
+
+@media (min-width: 769px) {
+  .footer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1025px) {
+  .footer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.footer__nav ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__nav ul li {
+  padding: 0.5rem 1rem;
+  background: red;
+  display: inline-block;
+}
 
 /*# sourceMappingURL=maps/style.css.map */

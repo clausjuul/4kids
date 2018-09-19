@@ -1,2 +1,17 @@
-
+.footer {
+    @include grid3;
+    justify-content: center;
+    padding: $spacing;
+    background: steelblue;
+    &__nav ul {
+        display: flex;
+        flex-direction: column;
+    
+        & li {
+        padding: $padding__botton-small;
+        background: red;
+        display: inline-block;
+    }
+    }
+}
   
