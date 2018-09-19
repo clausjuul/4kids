@@ -227,6 +227,13 @@ gulp.task('sitemap', function () {
 gulp.task('sass', function () {
     return gulp.src(['src/scss/**/*.scss'])
         .pipe(plumber())
+        
+        // .pipe(sassLint({
+        //     configFile: '.sass-lint.yml'
+        // }))
+        // .pipe(sassLint.format())
+        // .pipe(sassLint.failOnError())
+
         .pipe(sourcemaps.init())
         .pipe(sass({
             outputStyle: 'expanded',
@@ -236,6 +243,7 @@ gulp.task('sass', function () {
             fontMagician() // Automaticly gets all fonts from https://fonts.google.com/
         ]))
         .pipe(sourcemaps.write("./maps"))
+        
         .pipe(gulp.dest("src/css"))
         .pipe(browserSync.stream());
 });
