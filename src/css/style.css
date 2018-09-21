@@ -1,10 +1,8 @@
 @font-face {
-<<<<<<< HEAD
   font-family: "Open Sans";
   font-style: italic;
   font-weight: 300;
   src: local("Open Sans Light Italic"),local(OpenSans-LightItalic),url(//fonts.gstatic.com/s/opensans/v15/memnYaGs126MiZpBA-UFUKWyV9hrIqc.eot?#) format("eot"),url(//fonts.gstatic.com/s/opensans/v15/memnYaGs126MiZpBA-UFUKWyV9hrIqM.woff2) format("woff2"),url(//fonts.gstatic.com/s/opensans/v15/memnYaGs126MiZpBA-UFUKWyV9hrIqU.woff) format("woff");
-=======
   font-family: Roboto;
   font-style: italic;
   font-weight: 100;
@@ -15,49 +13,38 @@
   font-style: italic;
   font-weight: 300;
   src: local("Roboto Light Italic"),local(Roboto-LightItalic),url(//fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51TjASc6CsA.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51TjASc6CsQ.woff2) format("woff2"),url(//fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51TjASc6CsI.woff) format("woff");
->>>>>>> footer
 }
 @font-face {
-<<<<<<< HEAD
   font-family: "Open Sans";
   font-style: italic;
   font-weight: 400;
   src: local("Open Sans Italic"),local(OpenSans-Italic),url(//fonts.gstatic.com/s/opensans/v15/mem6YaGs126MiZpBA-UFUK0Zdck.eot?#) format("eot"),url(//fonts.gstatic.com/s/opensans/v15/mem6YaGs126MiZpBA-UFUK0Zdc0.woff2) format("woff2"),url(//fonts.gstatic.com/s/opensans/v15/mem6YaGs126MiZpBA-UFUK0Zdcs.woff) format("woff");
-=======
   font-family: Roboto;
   font-style: italic;
   font-weight: 400;
   src: local("Roboto Italic"),local(Roboto-Italic),url(//fonts.gstatic.com/s/roboto/v18/KFOkCnqEu92Fr1Mu51xIIzY.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v18/KFOkCnqEu92Fr1Mu51xIIzI.woff2) format("woff2"),url(//fonts.gstatic.com/s/roboto/v18/KFOkCnqEu92Fr1Mu51xIIzQ.woff) format("woff");
->>>>>>> footer
 }
 @font-face {
-<<<<<<< HEAD
   font-family: "Open Sans";
   font-style: italic;
   font-weight: 600;
   src: local("Open Sans SemiBold Italic"),local(OpenSans-SemiBoldItalic),url(//fonts.gstatic.com/s/opensans/v15/memnYaGs126MiZpBA-UFUKXGUdhrIqc.eot?#) format("eot"),url(//fonts.gstatic.com/s/opensans/v15/memnYaGs126MiZpBA-UFUKXGUdhrIqM.woff2) format("woff2"),url(//fonts.gstatic.com/s/opensans/v15/memnYaGs126MiZpBA-UFUKXGUdhrIqU.woff) format("woff");
-=======
   font-family: Roboto;
   font-style: italic;
   font-weight: 500;
   src: local("Roboto Medium Italic"),local(Roboto-MediumItalic),url(//fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51S7ACc6CsA.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51S7ACc6CsQ.woff2) format("woff2"),url(//fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51S7ACc6CsI.woff) format("woff");
->>>>>>> footer
 }
 @font-face {
-<<<<<<< HEAD
   font-family: "Open Sans";
   font-style: italic;
   font-weight: 700;
   src: local("Open Sans Bold Italic"),local(OpenSans-BoldItalic),url(//fonts.gstatic.com/s/opensans/v15/memnYaGs126MiZpBA-UFUKWiUNhrIqc.eot?#) format("eot"),url(//fonts.gstatic.com/s/opensans/v15/memnYaGs126MiZpBA-UFUKWiUNhrIqM.woff2) format("woff2"),url(//fonts.gstatic.com/s/opensans/v15/memnYaGs126MiZpBA-UFUKWiUNhrIqU.woff) format("woff");
-=======
   font-family: Roboto;
   font-style: italic;
   font-weight: 700;
   src: local("Roboto Bold Italic"),local(Roboto-BoldItalic),url(//fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51TzBic6CsA.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51TzBic6CsQ.woff2) format("woff2"),url(//fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51TzBic6CsI.woff) format("woff");
->>>>>>> footer
 }
 @font-face {
-<<<<<<< HEAD
   font-family: "Open Sans";
   font-style: italic;
   font-weight: 800;
@@ -69,41 +56,32 @@
   font-style: normal;
   font-weight: 300;
   src: local("Open Sans Light"),local(OpenSans-Light),url(//fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN_r8OUuht.eot?#) format("eot"),url(//fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN_r8OUuhp.woff2) format("woff2"),url(//fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN_r8OUuhv.woff) format("woff");
-=======
   font-family: Roboto;
   font-style: italic;
   font-weight: 900;
   src: local("Roboto Black Italic"),local(Roboto-BlackItalic),url(//fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51TLBCc6CsA.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51TLBCc6CsQ.woff2) format("woff2"),url(//fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51TLBCc6CsI.woff) format("woff");
->>>>>>> footer
 }
 @font-face {
-<<<<<<< HEAD
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   src: local("Open Sans Regular"),local(OpenSans-Regular),url(//fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVZ0f.eot?#) format("eot"),url(//fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVZ0b.woff2) format("woff2"),url(//fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVZ0d.woff) format("woff");
-=======
   font-family: Roboto;
   font-style: normal;
   font-weight: 100;
   src: local("Roboto Thin"),local(Roboto-Thin),url(//fonts.gstatic.com/s/roboto/v18/KFOkCnqEu92Fr1MmgVxIIzY.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v18/KFOkCnqEu92Fr1MmgVxIIzI.woff2) format("woff2"),url(//fonts.gstatic.com/s/roboto/v18/KFOkCnqEu92Fr1MmgVxIIzQ.woff) format("woff");
->>>>>>> footer
 }
 @font-face {
-<<<<<<< HEAD
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 600;
   src: local("Open Sans SemiBold"),local(OpenSans-SemiBold),url(//fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOUuht.eot?#) format("eot"),url(//fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOUuhp.woff2) format("woff2"),url(//fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOUuhv.woff) format("woff");
-=======
   font-family: Roboto;
   font-style: normal;
   font-weight: 300;
   src: local("Roboto Light"),local(Roboto-Light),url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc8.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc4.woff2) format("woff2"),url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc-.woff) format("woff");
->>>>>>> footer
 }
 @font-face {
-<<<<<<< HEAD
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
@@ -120,10 +98,8 @@
 @font-face {
   font-family: monospace;
   font-style: italic;
-=======
   font-family: Roboto;
   font-style: normal;
->>>>>>> footer
   font-weight: 400;
   src: local(Roboto),local(Roboto-Regular),url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxO.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxK.woff2) format("woff2"),url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxM.woff) format("woff");
 }
@@ -347,7 +323,6 @@ figure img {
   align-self: center;
 }
 
-<<<<<<< HEAD
 /*
 Root vars. STANDARD FONTS AND COLORS 
 */
@@ -364,7 +339,7 @@ html {
 @media screen and (min-width: 768px) {
   html {
     font-size: calc(14px + 5 * ((100vw - 768px) / 256));
-=======
+  }
 .cards {
   display: grid;
   grid-template-columns: 1fr;
@@ -378,7 +353,6 @@ html {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 2.2rem;
     padding: 4.4rem;
->>>>>>> footer
   }
 }
 
@@ -411,7 +385,6 @@ html {
   padding: .25rem 1rem;
 }
 
-<<<<<<< HEAD
 body {
   padding: 0;
   margin: 0;
@@ -436,9 +409,7 @@ body {
   /* Prevent the callout on tap-hold and text selection */
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Open Sans", sans-serif;
-=======
+
 .card figure img {
   border-radius: 0.2rem 0.2rem 0 0;
   display: block;
@@ -459,7 +430,6 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 25px;
   margin: .6rem;
   letter-spacing: .2rem;
->>>>>>> footer
 }
 
 .card__content {
@@ -474,10 +444,6 @@ h1, h2, h3, h4, h5, h6 {
   opacity: .17;
 }
 
-<<<<<<< HEAD
-a {
-  color: inherit;
-=======
 .card div {
   display: flex;
   justify-content: space-between;
@@ -485,7 +451,6 @@ a {
   padding: 1rem;
   border-radius: 0.2rem;
   transform: scale(1.02);
->>>>>>> footer
 }
 
 .card__price {
@@ -509,7 +474,6 @@ a {
   font-weight: 300;
 }
 
-<<<<<<< HEAD
 body {
   background: #999;
 }
@@ -681,6 +645,4 @@ body {
   transform: translate3d(0, 0, 0) rotate(-45deg);
 }
 
-=======
->>>>>>> footer
 /*# sourceMappingURL=maps/style.css.map */
