@@ -2,9 +2,9 @@ html {
     $min-width: getBp('tablet');
     $max-width: getBp('desktop');
     line-height: 1.5;
-    $min-width: $tablet-width;
-    // $max-width: $desktop-width;
-    $max-width: 1500px;
+    $min-width: 756px;
+    $max-width: 1200px;
+    // $max-width: 1500px;
     $min-font: 14px;
     $max-font: 20px;
     @include fluid-font($min-width, $max-width, $min-font, $max-font);
@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    font-family: $main-font;
+    font-family: $font__primary;
     padding: 0;
     margin: 0;
     -moz-osx-font-smoothing: grayscale;
@@ -28,36 +28,55 @@ body {
 }
 
 h1 {
+    font-family: $heading__font;
+    font-weight: $heading__font-weight;
+    color: $heading__color;
     margin: .67em 0 .34em 0 // margin: .67em 0 calc(0.67em / 2) 0
 }
 
 h2 {
+    font-family: $heading2__font;
+    font-weight: $heading2__font-weight;
+    color: $heading2__color;
     margin: .75em 0 .38em 0 // margin: .75em 0 calc(0.75em / 2) 0
 }
 
 h3 {
+    font-family: $heading3__font;
+    font-weight: $heading3__font-weight;
+    color: $heading3__color;
     margin: .83em 0 .42em 0 // margin: .83em 0 calc(0.83em / 2) 0
 }
 
 h4 {
+    font-family: $heading4__font;
+    font-weight: $heading4__font-weight;
+    color: $heading4__color;
     margin: 1.12em 0 .57em 0 // margin: 1.12em 0 calc(1.12em / 2) 0
 }
 
-h5 {
-    margin: 1.5em 0 .75em 0
-}
+// h5 {
+//     font-family: $heading5__font;
+//     font-weight: $heading5__font-weight;
+//     color: $heading5__color;
+//     margin: 1.5em 0 .75em 0
+// }
 
-h6 {
-    margin: 1.67em 0 .84em 0
-}
-h1, h2, h3, h4, h5, h6 {
-    color: $text-heading;
-    font-weight: 400;
-}
+// h6 {
+//     font-family: $heading6__font;
+//     font-weight: $heading6__font-weight;
+//     color: $heading6__color;
+//     margin: 1.67em 0 .84em 0
+// }
+// h1, h2, h3, h4, h5, h6 {
+//     color: $text-heading;
+//     font-weight: 400;
+// }
 
 p {
-    color: $text-main;
-    font-weight: 300;
+    font-family: $paragraph__font;
+    font-weight: $paragraph__font-weight;
+    color: $paragraph__color;
 }
 
 ul {
@@ -81,15 +100,8 @@ figure {
         width: 100%;
         max-width: 100%;
         height: auto;
-        padding: 0;
-        margin: 0;
         object-fit: contain;
     }
-}
-
-p {
-    font-weight: 300;
-    color: get-color(tri3);
 }
 
 .row {
