@@ -1,10 +1,21 @@
 
-@mixin grid3($gap){
+// @mixin grid3($gap){
+//     display: grid;
+//     gap: $gap;
+//     grid-template-columns: 1fr;
+//     @include media('>phone'){
+//         grid-template-columns: repeat(3, 1fr);
+//     }
+// }
+@mixin grid3{
     display: grid;
-    gap: $gap;
-    grid-template-columns: repeat(3, 1fr);
-    @include mq-phone{
-        grid-template-columns: 1fr;
+    grid-gap: $spacing;
+    grid-template-columns: 1fr;
+    @include media('>tablet'){
+        grid-template-columns: 1fr 1fr;
+    }
+    @include media('>desktop'){
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 

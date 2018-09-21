@@ -1,5 +1,5 @@
 // Vendor stuff
-@import 'vendor/normalize8-not-sass';
+// @import 'vendor/normalize8-not-sass';
 @import 'vendor/include-media';
 
 // Functions
@@ -23,6 +23,7 @@
 // Components
 @import 'components/nav';
 @import 'footer';
+@import 'cards';
 
 // Components
 // @import 'components/tilmelding';
