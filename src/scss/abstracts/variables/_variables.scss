@@ -82,10 +82,39 @@ $color-theme: (
     tri3: $tc-txt-grey
 );
 
-//navigation
-// $nav-height: px2rem(100px);
-$nav-height: px2rem(100px);
 
+// $color-theme: (
+//     prim1: $tc-ubuntu-orange,
+//     prim2: $tc-white,
+//     prim3: $tc-black,
+//     sec1: $tc-light-aubergine,
+//     sec2: $tc-mid-aubergine,
+//     sec3: $tc-dark-aubergine,
+//     tri1: $tc-warm-grey,
+//     tri2: $tc-cool-grey,
+//     tri3: $tc-txt-grey
+// );
+
+$text-heading: #000;
+$text-main: #111;
+$text-secoundary: #030391;
+
+
+//PADDING & MARGINS
+
+$spacing: 2.2rem;
+$smallspacing: 2rem;
+
+
+$padding__botton: 1rem 2rem;
+$padding__botton-sm: 0.5rem 1rem;
+$padding__botton-xs: 0.25rem 0.5rem;
+
+$smargin: 1rem;
+$margin: 2rem;
+
+//STYLING
+$cards__border-radius: .2rem;
 
 @function get-color($key) {
     @if not map-has-key($color-theme, $key) {
@@ -98,7 +127,7 @@ $nav-height: px2rem(100px);
 
 
 $breakpoints: (
-    'phone': 300px,
+    'phone': 400px,
     'tablet': 768px,
     'desktop': 1024px
 );

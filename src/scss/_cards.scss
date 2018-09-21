@@ -1,0 +1,118 @@
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    background: green;
+    grid-gap: $smallspacing;
+    padding: $smallspacing;
+
+    @include media('>phone') {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: $spacing;
+        padding: $spacing * 2;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background: #eee;
+    border-radius: $cards__border-radius;
+    // box-shadow: 0 5px 15px -3px rgba(44, 44, 44, 0.234);
+    // padding: 1rem;
+
+    figure {
+        border-radius: $cards__border-radius $cards__border-radius 0 0;
+        display: block;
+        width: 100%;
+        height: auto;
+        position: relative;
+        // overflow: hidden;
+        padding: 66% 0 0 0;
+
+        /* 34.37% = 100 / (w / h) = 100 / (640 / 220) */
+        .off {
+            position: absolute;
+            top: 8%;
+            left: -.5rem;
+            border: 1px solid rgba(0, 0, 0, .3);
+            border-radius: 0 $cards__border-radius $cards__border-radius 0;
+            // font-size: 1rem;
+            font-size: 18px;
+            background: yellow;
+            color: black;
+            padding: .25rem 1rem;
+        }
+
+        img {
+            border-radius: $cards__border-radius $cards__border-radius 0 0;
+            display: block;
+            width: 100%;
+            max-height: 100%;
+            height: auto;
+            object-fit: cover;
+            object-position: center;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        // font-size: 1.8rem;
+        font-size: 25px;
+        margin: .6rem;
+        letter-spacing: .2rem;
+    }
+
+    &__content {
+        padding: 0 $smallspacing;
+        // font-size: 1rem;
+        font-size: 16px;
+        flex-grow: 1;
+    }
+
+    hr {
+        width: calc(100% - ($smallspacing * 2));
+        margin: 0 $smallspacing;
+        opacity: .17;
+    }
+
+    div {
+        display: flex;
+        justify-content: space-between;
+        background: steelblue;
+        padding: 1rem;
+        // border-radius: 0 0 $cards__border-radius $cards__border-radius;
+        border-radius: $cards__border-radius;
+        transform: scale(1.02);
+    }
+
+    &__price {
+        color: white;
+        font-weight: 300;
+        align-self: center;
+        // font-size: 1.2rem;
+        font-size: 18px;
+
+        &-discount {
+            padding: 0 .2rem;
+            // font-size: 1rem;
+            font-size: 16px;
+            align-self: center;
+            text-decoration: line-through;
+            color: red;
+        }
+    }
+
+
+    &__button {
+        @extend %button;
+        background: firebrick;
+        // font-size: .8rem;
+        font-size: 14px;
+        font-weight: 300;
+    }
+}
