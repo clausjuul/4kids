@@ -7,13 +7,13 @@ $debug: false !default;
     }
 }
 
-@include debug {
-    a[href='#'] {
-        background-color: red;
-        border: 1px red;
-        box-shadow: 0px 0px 10px 0px red;
-    }
-}
+// @include debug {
+//     a[href='#'] {
+//         background-color: red;
+//         border: 1px red;
+//         box-shadow: 0px 0px 10px 0px red;
+//     }
+// }
 
 html {
     $min-width: getBp('tablet');
@@ -46,10 +46,12 @@ body {
     margin: 0;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+    -moz-font-smooth: antialiased;
     font-family: $main-font;
     color: get-color(tri3);
     // font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    font-smooth: auto;
     
     // font-smooth: auto;
 

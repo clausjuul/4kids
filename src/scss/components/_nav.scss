@@ -1,8 +1,11 @@
-$menu-color: #bada55;
+// $menu-color: #bada55;
+$menu-color: kidColor('4', $kid-color-theme3);
 
-$menu-active-color: #fada77;
+// $menu-active-color: #fada77;
+$menu-active-color: tint(kidColor('1', $kid-color-theme2), 50%);
 
-$burger-color: white;
+// $burger-color: rgb(48, 77, 116);
+$burger-color: kidColor('3', $kid-color-theme2);
 
 $menu-items: 6;
 
@@ -10,17 +13,33 @@ $menu-item-size: 80px;
 
 $menu-item-gap: 0px;
 
+$burger-size: $menu-item-size / 2 + 10px;
+
 $pix-dir: 10px;
 
-$start-at-menu: false;
+$start-at-menu: true;
 
-body {
-    background: #999
-}
+// body {
+//     // background: #999
+// }
 
 .filler {
     height: 100vh;
 }
+
+// @font-face {
+//     font-family: 'Noto Color Emoji';
+//     src: local('Noto Color Emoji'),
+//            url("../font/NotoColorEmoji.ttf") format("ttf");
+// }
+
+// @font-face {
+//     font-family: MyHelvetica;
+//     src: local("Helvetica Neue Bold"),
+//          local("HelveticaNeue-Bold"),
+//          url(MgOpenModernaBold.ttf);
+//     font-weight: bold;
+//   }
 
 %ball {
     background-color: $menu-color;
@@ -33,6 +52,7 @@ body {
     color: white;
     text-align: center;
     left: calc(50% - #{px2rem($menu-item-size / 2)});
+    top: calc(50% - #{px2rem($menu-item-size / 2)});
     transform: translate3d(0, 0, 0);
     transition: transform 150ms;
     transition-timing-function: cubic-bezier(0.480, -0.600, 0.345, 1.295);
@@ -46,8 +66,8 @@ body {
     // width: 100%;
     position: fixed;
     width: 100%;
-    // bottom: 0;
-    height: px2rem($menu-item-size * 1.5);
+    bottom: 0;
+    height: px2rem($menu-item-size * 1.8);
 
     // $min-width: $tablet-width;
     // $max-width: $desktop-width;
@@ -61,38 +81,22 @@ body {
 }
 
 .navbar {
-    
+
     height: auto;
     display: inline-block;
-    width: px2rem($menu-item-size * ($menu-items + 1));
+    width: px2rem(($menu-item-size * ($menu-items + 1) - 10px));
     // width: 100%;
     height: 100%;
     margin: 0;
-    padding: 0;
+    padding: 10px 0;
     position: relative;
     // left: calc(50% - #{px2rem(($menu-item-size * $menu-items + 1) / 2)});
     left: 50%;
     transform: translateX(-50%);
-
-    // top: px2rem(90px);
-    // left: 50%;
-    // transform: translate(-50%, 0);
-    // position: fixed;
-    // bottom: 100%;
-    // top: -40px;
-    // bottom: px2rem(30px);
-    // left:50%;
     filter: url('#shadowed-goo');
-    // z-index: 300;  
-
-
-    // opacity: 1;
     box-sizing: border-box;
     font-size: px2rem(20px);
     text-align: left;
-
- 
-
 
 
     li {
@@ -107,7 +111,11 @@ body {
             justify-self: center;
             align-self: center;
             width: 100%;
+            // height: 100%;
             text-align: center;
+            font-size: px2rem($menu-item-size / 2);
+            // font-size: 100%;
+            text-decoration: none;
         }
 
         span {
@@ -137,6 +145,26 @@ body {
             }
         }
 
+        // .burger-shape {
+
+        //     background: $burger-color;
+        //     position: relative;
+        //     height: px2rem($burger-size);
+        //     width: px2rem($burger-size);
+        //     top: 50%;
+        //     left: 50%;
+        //     transform: translate(-50%, -50%);
+        //     clip-path: polygon(0 100%, 0 81%, 51% 75%, 51% 59%, 0 61%, 0 34%, 49% 37%, 49% 18%, 0 22%, 0 0, 100% 0, 100% 22%, 49% 18%, 49% 38%, 100% 46%, 100% 60%, 51% 59%, 51% 76%, 100% 74%, 100% 100%);
+        //     transition: clip-path 200ms;
+        // }
+
+        // @for $i from 1 through $menu-items {
+        //     @if not $i == ($menu-items / 2 + 1) {
+        //         &:nth-child(#{$i}) {
+        //             transition-duration: 200ms;
+        //         }
+        //     }
+        // }
         @for $i from 1 through $menu-items {
             @if not $i == ($menu-items / 2 + 1) {
                 &:nth-child(#{$i}) {
@@ -146,20 +174,62 @@ body {
         }
     }
 
+    // .navbar__open-button {
+    &__open-button {
+        @extend %ball;
+        // transition-timing-function:cubic-bezier(0.175, 0.885, 0.320, 1.275);
+        z-index: 200;
+        // transition-timing-function: cubic-bezier(0.480, -0.600, 0.515, 1.580);
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+        /* custom */
+        transition-duration: 400ms;
+        // transform:scale(1.1,1.1) translate3d(0,0,0);
+        cursor: pointer;
+        line-height: 100%;
+    
+        span {
+            $width: 25px;
+            $height: 3px;
+            width: px2rem($width);
+            height: px2rem($height);
+            background: $burger-color;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: px2rem(-$width/2);
+            margin-top: px2rem(-$height/2);
+            transition: transform 200ms;
+    
+            &:nth-child(1) {
+                transform: translate3d(0, px2rem(-8px), 0);
+            }
+    
+            &:nth-child(2) {
+                transform: translate3d(0, 0, 0);
+            }
+    
+            &:nth-child(3) {
+                transform: translate3d(0, px2rem(8px), 0);
+            }
+        }
+    
+        .burger-shape {
+    
+            background: $burger-color;
+            position: relative;
+            height: px2rem($burger-size);
+            width: px2rem($burger-size);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            clip-path: polygon(0 100%, 0 81%, 51% 75%, 51% 59%, 0 61%, 0 34%, 49% 37%, 49% 18%, 0 22%, 0 0, 100% 0, 100% 22%, 49% 18%, 49% 38%, 100% 46%, 100% 60%, 51% 59%, 51% 76%, 100% 74%, 100% 100%);
+            transition: clip-path 200ms;
+        }
+    }
 }
 
 // .logo {
-.navbar__open-button {
-    @extend %ball;
-    // transition-timing-function:cubic-bezier(0.175, 0.885, 0.320, 1.275);
-    z-index: 200;
-    transition-timing-function: cubic-bezier(0.480, -0.600, 0.515, 1.580);
-    /* custom */
-    transition-duration: 400ms;
-    // transform:scale(1.1,1.1) translate3d(0,0,0);
-    cursor: pointer;
-    line-height: 100%;
-}
 
 // .playMenu {
 //     background-color: $menu-active-color;
@@ -193,21 +263,25 @@ body {
 // $real-menu-items: $menu-items + 1;
 .navbar--open {
     li {
-        transition-timing-function: cubic-bezier(0.480, -0.600, 0.345, 1.295);
-        /* custom */
-        @for $i from 1 through $menu-items + 1 {
+        // transition-timing-function: cubic-bezier(0.480, -0.600, 0.345, 1.295);
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+
+        @for $i from 1 through $menu-items+1 {
             @if $i <= ($menu-items / 2) {
-                &:nth-child(#{$i}) { 
+                &:nth-child(#{$i}) {
                     /* left */
-                    
+
                     transition-duration: 250ms + (80ms * abs(($i + 0) - ($menu-items + 1)));
+
                     // transform: translate3d(px2rem($menu-item-size * (($i - 1 + $menu-items / 2) - $menu-items)), px2rem(-((10px * (($i - 1 + $menu-items / 2) - $menu-items) + 10px))), 0);
                     @if $start-at-menu {
-                        transform: translate3d(px2rem(($menu-item-size + $menu-item-gap) * (($i - 1 + $menu-items / 2) - $menu-items)), 
-                        px2rem(-(($pix-dir * (($i - 1 + $menu-items / 2) - $menu-items) + $pix-dir))), 0);
-                    } @else {
-                        transform: translate3d(px2rem(($menu-item-size + $menu-item-gap) * (($i - 1 + $menu-items / 2) - $menu-items)), 
-                        px2rem(-(($pix-dir * (($i - 1 + $menu-items / 2) - $menu-items)))), 0);
+                        transform: translate3d(px2rem(($menu-item-size + $menu-item-gap) * (($i - 1 + $menu-items / 2) - $menu-items)),
+                            px2rem(-(($pix-dir * (($i - 1 + $menu-items / 2) - $menu-items) + $pix-dir))), 0);
+                    }
+
+                    @else {
+                        transform: translate3d(px2rem(($menu-item-size + $menu-item-gap) * (($i - 1 + $menu-items / 2) - $menu-items)),
+                            px2rem(-(($pix-dir * (($i - 1 + $menu-items / 2) - $menu-items)))), 0);
                     }
                 }
             }
@@ -217,13 +291,61 @@ body {
                     &:nth-child(#{$i}) {
                         /* right */
                         transition-duration: 250ms + (80ms * ($i - 1));
+
                         // transform: translate3d(px2rem($menu-item-size * ($i - ($menu-items / 2 + 1))), px2rem((10px * ($i - ($menu-items / 2 + 1))) - 10px), 0);
                         @if $start-at-menu {
-                            transform: translate3d(px2rem(($menu-item-size + $menu-item-gap) * ($i - ($menu-items / 2 + 1))), 
-                            px2rem(($pix-dir * ($i - ($menu-items / 2 + 1))) - $pix-dir), 0);
-                        } @else {
-                            transform: translate3d(px2rem(($menu-item-size + $menu-item-gap) * ($i - ($menu-items / 2 + 1))), 
-                            px2rem(($pix-dir * ($i - ($menu-items / 2 + 1)))), 0);
+                            transform: translate3d(px2rem(($menu-item-size + $menu-item-gap) * ($i - ($menu-items / 2 + 1))),
+                                px2rem(($pix-dir * ($i - ($menu-items / 2 + 1))) - $pix-dir), 0);
+                        }
+
+                        @else {
+                            transform: translate3d(px2rem(($menu-item-size + $menu-item-gap) * ($i - ($menu-items / 2 + 1))),
+                                px2rem(($pix-dir * ($i - ($menu-items / 2 + 1)))), 0);
+                        }
+                    }
+                }
+            }
+        }
+
+        @include media('>desktop') {
+            $pix-dir: -$pix-dir;
+
+            @for $i from 1 through $menu-items+1 {
+                @if $i <= ($menu-items / 2) {
+                    &:nth-child(#{$i}) {
+                        /* left */
+
+                        transition-duration: 250ms + (80ms * abs(($i + 0) - ($menu-items + 1)));
+
+                        // transform: translate3d(px2rem($menu-item-size * (($i - 1 + $menu-items / 2) - $menu-items)), px2rem(-((10px * (($i - 1 + $menu-items / 2) - $menu-items) + 10px))), 0);
+                        @if $start-at-menu {
+                            transform: translate3d(px2rem(($menu-item-size + $menu-item-gap) * (($i - 1 + $menu-items / 2) - $menu-items)),
+                                px2rem(-(($pix-dir * (($i - 1 + $menu-items / 2) - $menu-items) + $pix-dir))), 0);
+                        }
+
+                        @else {
+                            transform: translate3d(px2rem(($menu-item-size + $menu-item-gap) * (($i - 1 + $menu-items / 2) - $menu-items)),
+                                px2rem(-(($pix-dir * (($i - 1 + $menu-items / 2) - $menu-items)))), 0);
+                        }
+                    }
+                }
+
+                @else {
+                    @if $i > ($menu-items / 2 + 1) {
+                        &:nth-child(#{$i}) {
+                            /* right */
+                            transition-duration: 250ms + (80ms * ($i - 1));
+
+                            // transform: translate3d(px2rem($menu-item-size * ($i - ($menu-items / 2 + 1))), px2rem((10px * ($i - ($menu-items / 2 + 1))) - 10px), 0);
+                            @if $start-at-menu {
+                                transform: translate3d(px2rem(($menu-item-size + $menu-item-gap) * ($i - ($menu-items / 2 + 1))),
+                                    px2rem(($pix-dir * ($i - ($menu-items / 2 + 1))) - $pix-dir), 0);
+                            }
+
+                            @else {
+                                transform: translate3d(px2rem(($menu-item-size + $menu-item-gap) * ($i - ($menu-items / 2 + 1))),
+                                    px2rem(($pix-dir * ($i - ($menu-items / 2 + 1)))), 0);
+                            }
                         }
                     }
                 }
@@ -235,8 +357,10 @@ body {
     .navbar__open-button {
         // transition-timing-function: cubic-bezier(0.480, -0.600, 0.515, 1.580);
         /* custom */
-        transition-timing-function: cubic-bezier(0.480, -0.600, 0.515, 1.580); /* custom */
+        // transition-timing-function: cubic-bezier(0.480, -0.600, 0.515, 1.580); /* custom */
         // transition-timing-function: cubic-bezier(0.1, -0.1, 0.345, 1.295);
+        transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+
 
 
         transition-duration: 400ms;
@@ -252,14 +376,60 @@ body {
             &:nth-child(1) {
                 transform: translate3d(0, 0, 0) rotate(45deg);
             }
-    
+
             &:nth-child(2) {
                 transform: translate3d(0, 0, 0) scale(0.1, 1);
             }
-    
+
             &:nth-child(3) {
                 transform: translate3d(0, 0, 0) rotate(-45deg);
             }
+        }
+
+        .burger-shape {
+            transition: clip-path 500ms;
+            // clip-path: polygon(0 100%, 0 83%, 0 72%, 0 70%, 0 55%, 0 44%, 0 35%, 0 22%, 0 15%, 0 0, 100% 0, 100% 15%, 100% 21%, 100% 33%, 100% 46%, 100% 56%, 100% 61%, 100% 69%, 100% 80%, 100% 100%);
+            // clip-path: polygon(
+            //     0 100%, 
+            //     0 83%, 
+            //     0 72%,
+            //     0 70%, 
+            //     0 55%, 
+            //     0 44%, 
+            //     0 35%, 
+            //     0 22%, 
+            //     0 15%, 
+            //     0 0, 
+            //     100% 0, 
+            //     100% 15%, 
+            //     100% 21%, 
+            //     100% 33%, 
+            //     100% 46%, 
+            //     100% 56%, 
+            //     100% 61%, 
+            //     100% 69%, 
+            //     100% 80%, 
+            //     100% 100%);
+            clip-path: polygon(40% 100%,
+                23% 96%,
+                11% 85%,
+                3% 68%,
+                1% 50%,
+                5% 33%,
+                13% 19%,
+                24% 10%,
+                37% 4%,
+                55% 3%,
+                73% 7%,
+                90% 18%,
+                96% 34%,
+                100% 45%,
+                99% 60%,
+                95% 76%,
+                86% 87%,
+                75% 96%,
+                61% 100%,
+                100% 100%);
         }
     }
 }

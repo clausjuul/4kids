@@ -11,7 +11,10 @@
 // SCSS VARS_____________________
 //
 // Fonts and fallbacks
-$main-font: 'Open Sans', sans-serif;
+// $main-font: 'Noto Color Emoji', sans-serif;
+$main-font: 'Noto Color Emoji', 'Noto Sans', sans-serif;
+// $main-font: 'Open Sans', sans-serif;
+// $main-font: 'Crimson Text', sans-serif;
 
 // Core Colors.
 // tc = Theme Color;
@@ -28,6 +31,44 @@ $tc-dark-aubergine: #2C001E;
 $tc-warm-grey: #AEA79F;
 $tc-cool-grey: #333;
 $tc-txt-grey: #111;
+
+
+$kid-color-theme: (
+    '1': #2BA8FF,
+    '2': #0AE80C,
+    '3': #FFCD17,
+    '4': #E8290A,
+    '5': #7208FF
+);
+
+$kid-color-theme2: (
+    '1': #147EEE,
+    '2': #141414,
+    '3': #E7E7E7,
+    '4': #14EE7E,
+    '5': #EE1414
+);
+
+$kid-color-theme3: (
+    '1': #F76726,
+    '2': #3CA8FF,
+    '3': #FFED2B,
+    '4': #13C2C9,
+    '5': #FB3656
+);
+
+$kid-color-theme-menu: (
+
+);
+
+@function kidColor($key, $color-map: $kid-color-theme) {
+    @if not map-has-key($color-map, $key) {
+        @warn 'no color with that name found.';
+        @return deeppink;
+    } @else {
+        @return map-get($color-map, $key);
+    }
+}
 
 $color-theme: (
     prim1: $tc-ubuntu-orange,
@@ -65,7 +106,7 @@ $breakpoints: (
 
 $gridcontainer-exists: true;
 
-$debug: false;
+$debug: true;
 
 /*
 Root vars. STANDARD FONTS AND COLORS 
