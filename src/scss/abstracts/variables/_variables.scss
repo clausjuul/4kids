@@ -12,25 +12,15 @@
 //
 // Fonts and fallbacks
 // $main-font: 'Noto Color Emoji', sans-serif;
-$main-font: 'Noto Color Emoji', 'Noto Sans', sans-serif;
+// $main-font: 'Poor Story', 'Open Sans', 'Noto Color Emoji', 'Noto Sans', sans-serif;
 // $main-font: 'Open Sans', sans-serif;
 // $main-font: 'Crimson Text', sans-serif;
-
-// Core Colors.
-// tc = Theme Color;
-$tc-ubuntu-orange: #E95420;
-$tc-white: #FFF;
-$tc-black: #000;
-
-// Supporting colors
-$tc-light-aubergine: #77216F;
-$tc-mid-aubergine: #5E2750;
-$tc-dark-aubergine: #2C001E;
-
-// Neutral colors
-$tc-warm-grey: #AEA79F;
-$tc-cool-grey: #333;
-$tc-txt-grey: #111;
+// $main-font: 'Skranji', sans-serif;
+// $main-font: 'Arima Madurai', sans-serif;
+// $main-font: 'Bubblegum Sans', sans-serif;
+// $main-font: 'Englebert', sans-serif;
+// $main-font: 'Covered By Your Grace', sans-serif;
+$main-font: 'Palanquin', sans-serif;
 
 
 $kid-color-theme: (
@@ -70,31 +60,6 @@ $kid-color-theme-menu: (
     }
 }
 
-$color-theme: (
-    prim1: $tc-ubuntu-orange,
-    prim2: $tc-white,
-    prim3: $tc-black,
-    sec1: $tc-light-aubergine,
-    sec2: $tc-mid-aubergine,
-    sec3: $tc-dark-aubergine,
-    tri1: $tc-warm-grey,
-    tri2: $tc-cool-grey,
-    tri3: $tc-txt-grey
-);
-
-
-// $color-theme: (
-//     prim1: $tc-ubuntu-orange,
-//     prim2: $tc-white,
-//     prim3: $tc-black,
-//     sec1: $tc-light-aubergine,
-//     sec2: $tc-mid-aubergine,
-//     sec3: $tc-dark-aubergine,
-//     tri1: $tc-warm-grey,
-//     tri2: $tc-cool-grey,
-//     tri3: $tc-txt-grey
-// );
-
 $text-heading: #000;
 $text-main: #111;
 $text-secoundary: #030391;
@@ -114,16 +79,7 @@ $smargin: 1rem;
 $margin: 2rem;
 
 //STYLING
-$cards__border-radius: .2rem;
-
-@function get-color($key) {
-    @if not map-has-key($color-theme, $key) {
-        @warn 'no color with that name found.';
-        @return deeppink;
-    } @else {
-        @return map-get($color-theme, $key);
-    }
-}
+$cards__border-radius: .5rem;
 
 
 $breakpoints: (
@@ -133,17 +89,26 @@ $breakpoints: (
 );
 // ) !default;
 
-$gridcontainer-exists: true;
 
-$debug: true;
+$menu-color: kidColor('4', $kid-color-theme3);
 
-/*
-Root vars. STANDARD FONTS AND COLORS 
-*/
-// :root {
-//     // /* FONTS AND FALLBACKS */
-    
-    
-//     // /* Calculation */
-//     // --respaonsive: calc((var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 100px) / (1200 - 100))); /* Ranges from 421px to 1199px */
-// }
+// $menu-active-color: #fada77;
+$menu-active-color: tint(kidColor('1', $kid-color-theme2), 50%);
+
+// $burger-color: rgb(48, 77, 116);
+$burger-color: kidColor('3', $kid-color-theme2);
+
+$menu-items: 4;
+
+$menu-item-size: 80px;
+
+$menu-item-gap: 0;
+
+$burger-size: $menu-item-size / 2 + 10px;
+
+$pix-dir: 10px;
+
+$start-at-menu: true;
+
+
+

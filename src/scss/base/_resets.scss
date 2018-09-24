@@ -1,32 +1,19 @@
 html {
-    $min-width: getBp('tablet');
+    $min-width: getBp('phone');
     $max-width: getBp('desktop');
     line-height: 1.5;
-    $max-width: 1500px;
+    // $max-width: 1500px; 
     $min-font: 14px;
     $max-font: 20px;
     @include fluid-font($min-width, $max-width, $min-font, $max-font);
-    box-sizing: border-box;
     scroll-behavior: smooth;
-}
-
-body {
-    font-family: $main-font;
-    padding: 0;
-    margin: 0;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
+    box-sizing: border-box;
 }
 
 *,
 :before,
 :after {
     box-sizing: inherit;
-}
-
-h1 {
-    margin: .67em 0 .34em 0 // margin: .67em 0 calc(0.67em / 2) 0
 }
 
 body {
@@ -36,13 +23,19 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-font-smooth: antialiased;
     font-family: $main-font;
-    color: get-color(tri3);
+    color: $text-main;
     // font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     font-smooth: auto;
-    
+
 }
-    // font-smooth: auto;
+
+// font-smooth: auto;
+
+h1 {
+    margin: .67em 0 .34em 0 // margin: .67em 0 calc(0.67em / 2) 0
+}
+
 h2 {
     margin: .75em 0 .38em 0 // margin: .75em 0 calc(0.75em / 2) 0
 }
@@ -62,14 +55,20 @@ h5 {
 h6 {
     margin: 1.67em 0 .84em 0
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: $text-heading;
     font-weight: 400;
 }
 
 p {
     color: $text-main;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 ul {
@@ -101,9 +100,9 @@ figure {
 
 p {
     font-weight: 300;
-    color: get-color(tri3);
+    color: $text-main;
 }
 
-.row {
-    @extend %row;
+.hidden {
+    @extend %hidden !optional;
 }

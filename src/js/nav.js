@@ -13,12 +13,34 @@
 // }
 
 var navbar = document.querySelector(".navbar");
-var trigger = document.querySelector(".navbar__open-button")
+// var trigger = document.querySelector(".navbar__open-button")
 
 // document.getElementById("mobile-menu").onclick = function () {
-trigger.onclick = function () {
-    navbar.classList.toggle("navbar--open");
-}
+// trigger.onclick = function () {
+//     navbar.classList.toggle("navbar--open");
+//     if (navbar.parentElement.classList.contains('main-nav') == true) {
+//         navbar.parentElement.classList.toggle('overlay');
+//     }
+// }
+navbar.querySelectorAll('li').forEach((li) => {
+    // li.onclick = toggleNav();
+    li.onclick = function () {
+        navbar.classList.toggle("navbar--open");
+        if (navbar.parentElement.classList.contains('main-nav') == true) {
+            navbar.parentElement.classList.toggle('overlay');
+        }
+    }
+});
+
+// function toggleNav() {
+//     navbar.classList.toggle("navbar--open");
+//     if (navbar.parentElement.classList.contains('main-nav') == true) {
+//         navbar.parentElement.classList.toggle('overlay');
+//     }
+// }
+
+// trigger.onclick = toggleNav();
+
 
 // document.getElementById('toggleMenu').addEventListener('click', function () {
 
