@@ -11,10 +11,78 @@
 // SCSS VARS_____________________
 //
 // Fonts and fallbacks
-$main-font: 'Roboto', sans-serif;
+// $main-font: 'Noto Color Emoji', sans-serif;
+$main-font: 'Noto Color Emoji', 'Noto Sans', sans-serif;
+// $main-font: 'Open Sans', sans-serif;
+// $main-font: 'Crimson Text', sans-serif;
 
 // Core Colors.
 // tc = Theme Color;
+$tc-ubuntu-orange: #E95420;
+$tc-white: #FFF;
+$tc-black: #000;
+
+// Supporting colors
+$tc-light-aubergine: #77216F;
+$tc-mid-aubergine: #5E2750;
+$tc-dark-aubergine: #2C001E;
+
+// Neutral colors
+$tc-warm-grey: #AEA79F;
+$tc-cool-grey: #333;
+$tc-txt-grey: #111;
+
+
+$kid-color-theme: (
+    '1': #2BA8FF,
+    '2': #0AE80C,
+    '3': #FFCD17,
+    '4': #E8290A,
+    '5': #7208FF
+);
+
+$kid-color-theme2: (
+    '1': #147EEE,
+    '2': #141414,
+    '3': #E7E7E7,
+    '4': #14EE7E,
+    '5': #EE1414
+);
+
+$kid-color-theme3: (
+    '1': #F76726,
+    '2': #3CA8FF,
+    '3': #FFED2B,
+    '4': #13C2C9,
+    '5': #FB3656
+);
+
+$kid-color-theme-menu: (
+
+);
+
+@function kidColor($key, $color-map: $kid-color-theme) {
+    @if not map-has-key($color-map, $key) {
+        @warn 'no color with that name found.';
+        @return deeppink;
+    } @else {
+        @return map-get($color-map, $key);
+    }
+}
+
+$color-theme: (
+    prim1: $tc-ubuntu-orange,
+    prim2: $tc-white,
+    prim3: $tc-black,
+    sec1: $tc-light-aubergine,
+    sec2: $tc-mid-aubergine,
+    sec3: $tc-dark-aubergine,
+    tri1: $tc-warm-grey,
+    tri2: $tc-cool-grey,
+    tri3: $tc-txt-grey
+);
+
+
 // $color-theme: (
 //     prim1: $tc-ubuntu-orange,
 //     prim2: $tc-white,
@@ -67,7 +135,7 @@ $paragraph__font: $font__primary;
 $paragraph__font-weight: 300;
 $paragraph__color: $color__secoundary;
 
-//PADDING & MARGINS
+//Padding & margins
 //Spacings
 $spacing: 2.2rem;
 $smallspacing: 2rem;
@@ -103,7 +171,7 @@ $breakpoints: (
 
 $gridcontainer-exists: true;
 
-$debug: false;
+$debug: true;
 
 /*
 Root vars. STANDARD FONTS AND COLORS 

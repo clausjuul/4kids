@@ -5,6 +5,7 @@ html {
     $min-width: 756px;
     $max-width: 1200px;
     // $max-width: 1500px;
+    $max-width: 1500px;
     $min-font: 14px;
     $max-font: 20px;
     @include fluid-font($min-width, $max-width, $min-font, $max-font);
@@ -19,6 +20,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    font-smooth: auto;
 }
 
 *,

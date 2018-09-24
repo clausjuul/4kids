@@ -121,11 +121,11 @@ html {
 
 @media screen and (min-width: 756px) {
   html {
-    font-size: calc(14px + 6 * ((100vw - 756px) / 444));
+    font-size: calc(14px + 6 * ((100vw - 756px) / 744));
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1500px) {
   html {
     font-size: 20px;
   }
@@ -151,6 +151,18 @@ h1 {
   font-weight: 300;
   color: #f1f1f1;
   margin: 0.67em 0 0.34em 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smooth: antialiased;
+  font-family: "Noto Color Emoji", "Noto Sans", sans-serif;
+  color: get-color(tri3);
+  text-rendering: optimizeLegibility;
+  font-smooth: auto;
 }
 
 h2 {
@@ -205,16 +217,12 @@ figure img {
   object-fit: contain;
 }
 
-body {
-  background: #999;
-}
-
 .filler {
   height: 100vh;
 }
 
 .navbar li, .navbar__open-button {
-  background-color: #bada55;
+  background-color: #13C2C9;
   border-radius: 100%;
   width: 5rem;
   height: 5rem;
@@ -222,6 +230,7 @@ body {
   color: white;
   text-align: center;
   left: calc(50% - 2.5rem);
+  top: calc(50% - 2.5rem);
   transform: translate3d(0, 0, 0);
   transition: transform 150ms;
   transition-timing-function: cubic-bezier(0.48, -0.6, 0.345, 1.295);
@@ -233,7 +242,8 @@ body {
   padding: 0;
   position: fixed;
   width: 100%;
-  height: 7.5rem;
+  bottom: 0;
+  height: 9rem;
 }
 
 @media (min-width: 1025px) {
@@ -245,10 +255,10 @@ body {
 .navbar {
   height: auto;
   display: inline-block;
-  width: 35rem;
+  width: 34.375rem;
   height: 100%;
   margin: 0;
-  padding: 0;
+  padding: 10px 0;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -269,12 +279,14 @@ body {
   align-self: center;
   width: 100%;
   text-align: center;
+  font-size: 2.5rem;
+  text-decoration: none;
 }
 
 .navbar li span {
   width: 1.5625rem;
   height: 0.1875rem;
-  background: white;
+  background: #E7E7E7;
   display: block;
   position: absolute;
   top: 50%;
@@ -298,11 +310,48 @@ body {
 
 .navbar__open-button {
   z-index: 200;
-  transition-timing-function: cubic-bezier(0.48, -0.6, 0.515, 1.58);
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   /* custom */
   transition-duration: 400ms;
   cursor: pointer;
   line-height: 100%;
+}
+
+.navbar__open-button span {
+  width: 1.5625rem;
+  height: 0.1875rem;
+  background: #E7E7E7;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -0.78125rem;
+  margin-top: -0.09375rem;
+  transition: transform 200ms;
+}
+
+.navbar__open-button span:nth-child(1) {
+  transform: translate3d(0, -0.5rem, 0);
+}
+
+.navbar__open-button span:nth-child(2) {
+  transform: translate3d(0, 0, 0);
+}
+
+.navbar__open-button span:nth-child(3) {
+  transform: translate3d(0, 0.5rem, 0);
+}
+
+.navbar__open-button .burger-shape {
+  background: #E7E7E7;
+  position: relative;
+  height: 3.125rem;
+  width: 3.125rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  clip-path: polygon(0 100%, 0 81%, 51% 75%, 51% 59%, 0 61%, 0 34%, 49% 37%, 49% 18%, 0 22%, 0 0, 100% 0, 100% 22%, 49% 18%, 49% 38%, 100% 46%, 100% 60%, 51% 59%, 51% 76%, 100% 74%, 100% 100%);
+  transition: clip-path 200ms;
 }
 
 @keyframes playMenu {
@@ -315,53 +364,84 @@ body {
 }
 
 .navbar--open li {
-  transition-timing-function: cubic-bezier(0.48, -0.6, 0.345, 1.295);
-  /* custom */
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .navbar--open li:nth-child(1) {
   /* left */
   transition-duration: 730ms;
-  transform: translate3d(-15rem, 1.875rem, 0);
+  transform: translate3d(-15rem, 1.25rem, 0);
 }
 
 .navbar--open li:nth-child(2) {
   /* left */
   transition-duration: 650ms;
-  transform: translate3d(-10rem, 1.25rem, 0);
+  transform: translate3d(-10rem, 0.625rem, 0);
 }
 
 .navbar--open li:nth-child(3) {
   /* left */
   transition-duration: 570ms;
-  transform: translate3d(-5rem, 0.625rem, 0);
+  transform: translate3d(-5rem, 0rem, 0);
 }
 
 .navbar--open li:nth-child(5) {
   /* right */
   transition-duration: 570ms;
-  transform: translate3d(5rem, 0.625rem, 0);
+  transform: translate3d(5rem, 0rem, 0);
 }
 
 .navbar--open li:nth-child(6) {
   /* right */
   transition-duration: 650ms;
-  transform: translate3d(10rem, 1.25rem, 0);
+  transform: translate3d(10rem, 0.625rem, 0);
 }
 
 .navbar--open li:nth-child(7) {
   /* right */
   transition-duration: 730ms;
-  transform: translate3d(15rem, 1.875rem, 0);
+  transform: translate3d(15rem, 1.25rem, 0);
+}
+
+@media (min-width: 1025px) {
+  .navbar--open li:nth-child(1) {
+    /* left */
+    transition-duration: 730ms;
+    transform: translate3d(-15rem, -1.25rem, 0);
+  }
+  .navbar--open li:nth-child(2) {
+    /* left */
+    transition-duration: 650ms;
+    transform: translate3d(-10rem, -0.625rem, 0);
+  }
+  .navbar--open li:nth-child(3) {
+    /* left */
+    transition-duration: 570ms;
+    transform: translate3d(-5rem, 0rem, 0);
+  }
+  .navbar--open li:nth-child(5) {
+    /* right */
+    transition-duration: 570ms;
+    transform: translate3d(5rem, 0rem, 0);
+  }
+  .navbar--open li:nth-child(6) {
+    /* right */
+    transition-duration: 650ms;
+    transform: translate3d(10rem, -0.625rem, 0);
+  }
+  .navbar--open li:nth-child(7) {
+    /* right */
+    transition-duration: 730ms;
+    transform: translate3d(15rem, -1.25rem, 0);
+  }
 }
 
 .navbar--open .navbar__open-button {
   /* custom */
-  transition-timing-function: cubic-bezier(0.48, -0.6, 0.515, 1.58);
-  /* custom */
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   transition-duration: 400ms;
   transform: scale(0.85, 0.85) translate3d(0, 0, 0);
-  background: #fada77;
+  background: #8abff7;
 }
 
 .navbar--open .navbar__open-button span:nth-child(1) {
@@ -374,6 +454,11 @@ body {
 
 .navbar--open .navbar__open-button span:nth-child(3) {
   transform: translate3d(0, 0, 0) rotate(-45deg);
+}
+
+.navbar--open .navbar__open-button .burger-shape {
+  transition: clip-path 500ms;
+  clip-path: polygon(40% 100%, 23% 96%, 11% 85%, 3% 68%, 1% 50%, 5% 33%, 13% 19%, 24% 10%, 37% 4%, 55% 3%, 73% 7%, 90% 18%, 96% 34%, 100% 45%, 99% 60%, 95% 76%, 86% 87%, 75% 96%, 61% 100%, 100% 100%);
 }
 
 .footer {
