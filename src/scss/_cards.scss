@@ -82,7 +82,7 @@
     }
 
     hr {
-        width: calc(100% - ($smallspacing * 2));
+        width: calc(100% - #{$smallspacing * 2});
         margin: 0 $smallspacing;
         opacity: .17;
     }

@@ -639,7 +639,7 @@ p {
 }
 
 .card hr {
-  width: calc(100% - ($smallspacing * 2));
+  width: calc(100% - 4rem);
   margin: 0 2rem;
   opacity: .17;
 }
