@@ -64,22 +64,61 @@ $text-heading: #000;
 $text-main: #111;
 $text-secoundary: #030391;
 
+//SET STYLES
+//Color theme
+$color__primary: #111;
+$color__secoundary: #333;
+$color__tertiary: #f1f1f1;
 
-//PADDING & MARGINS
+//Font theme
+$font__primary: 'Roboto', sans-serif;
+$font__secoundary: '"Open sans"', sans-serif;
 
+
+//CHANGE STYLES
+
+//Headings/h1, h2, h3..
+//h1
+$heading__font: $font__secoundary;
+$heading__font-weight: 300;
+$heading__color: $color__tertiary;
+
+//h2
+$heading2__font: $font__secoundary;
+$heading2__font-weight: 300;
+$heading2__color: $color__tertiary;
+
+//h3
+$heading3__font: $font__secoundary;
+$heading3__font-weight: 300;
+$heading3__color: $color__tertiary;
+
+//h4
+$heading4__font: $font__secoundary;
+$heading4__font-weight: 300;
+$heading4__color: $color__tertiary;
+
+//paragraph/p
+$paragraph__font: $font__primary;
+$paragraph__font-weight: 300;
+$paragraph__color: $color__secoundary;
+
+//Padding & margins
+//Spacings
 $spacing: 2.2rem;
 $smallspacing: 2rem;
 
-
+//Paddings
 $padding__botton: 1rem 2rem;
 $padding__botton-sm: 0.5rem 1rem;
 $padding__botton-xs: 0.25rem 0.5rem;
 
-$smargin: 1rem;
+//Margins
+$smallmargin: 1rem;
 $margin: 2rem;
 
 //STYLING
-$cards__border-radius: .5rem;
+$cards__border-radius: .2rem;
 
 
 $breakpoints: (

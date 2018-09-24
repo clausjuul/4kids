@@ -9,7 +9,7 @@
         flex-direction: column;
 
         & a {
-            color: $text-main;
+            color: $color__primary;
             font-weight: 300;
         }
     }
@@ -30,7 +30,7 @@
 
         label {
             padding: .2rem .4rem;
-            color: $text-main;
+            color: $color__secoundary;
             font-weight: 300;
         }
 
