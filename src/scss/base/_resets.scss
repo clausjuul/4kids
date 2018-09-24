@@ -1,7 +1,8 @@
 html {
-    $min-width: getBp('tablet');
+    $min-width: getBp('phone');
     $max-width: getBp('desktop');
     line-height: 1.5;
+    // $max-width: 1500px; 
     $min-width: 756px;
     $max-width: 1200px;
     // $max-width: 1500px;
@@ -9,18 +10,8 @@ html {
     $min-font: 14px;
     $max-font: 20px;
     @include fluid-font($min-width, $max-width, $min-font, $max-font);
-    box-sizing: border-box;
     scroll-behavior: smooth;
-}
-
-body {
-    font-family: $font__primary;
-    padding: 0;
-    margin: 0;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    font-smooth: auto;
+    box-sizing: border-box;
 }
 
 *,
@@ -28,6 +19,22 @@ body {
 :after {
     box-sizing: inherit;
 }
+
+body {
+    padding: 0;
+    margin: 0;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smooth: antialiased;
+    font-family: $main-font;
+    color: $text-main;
+    // font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-smooth: auto;
+
+}
+
+// font-smooth: auto;
 
 h1 {
     font-family: $heading__font;
@@ -106,6 +113,11 @@ figure {
     }
 }
 
-.row {
-    @extend %row;
+p {
+    font-weight: 300;
+    color: $text-main;
+}
+
+.hidden {
+    @extend %hidden !optional;
 }

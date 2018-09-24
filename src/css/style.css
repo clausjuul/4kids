@@ -1,94 +1,124 @@
-@font-face {
+@font-face{
+  font-family: Frijole;
+  font-style: normal;
+  font-weight: 400;
+  src: local(Frijole),url(//fonts.gstatic.com/s/frijole/v6/uU9PCBUR8oakM2BQ3xTR2w.eot?#) format("eot"),url(//fonts.gstatic.com/s/frijole/v6/uU9PCBUR8oakM2BQ3xTR3w.woff2) format("woff2"),url(//fonts.gstatic.com/s/frijole/v6/uU9PCBUR8oakM2BQ3xTR2Q.woff) format("woff");
+}
+@font-face{
   font-family: Roboto;
   font-style: italic;
   font-weight: 100;
   src: local("Roboto Thin Italic"),local(Roboto-ThinItalic),url(//fonts.gstatic.com/s/roboto/v18/KFOiCnqEu92Fr1Mu51QrEzAdKw.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v18/KFOiCnqEu92Fr1Mu51QrEzAdLw.woff2) format("woff2"),url(//fonts.gstatic.com/s/roboto/v18/KFOiCnqEu92Fr1Mu51QrEzAdKQ.woff) format("woff");
 }
-@font-face {
+@font-face{
   font-family: Roboto;
   font-style: italic;
   font-weight: 300;
   src: local("Roboto Light Italic"),local(Roboto-LightItalic),url(//fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51TjASc6CsA.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51TjASc6CsQ.woff2) format("woff2"),url(//fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51TjASc6CsI.woff) format("woff");
 }
-@font-face {
+@font-face{
   font-family: Roboto;
   font-style: italic;
   font-weight: 400;
   src: local("Roboto Italic"),local(Roboto-Italic),url(//fonts.gstatic.com/s/roboto/v18/KFOkCnqEu92Fr1Mu51xIIzY.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v18/KFOkCnqEu92Fr1Mu51xIIzI.woff2) format("woff2"),url(//fonts.gstatic.com/s/roboto/v18/KFOkCnqEu92Fr1Mu51xIIzQ.woff) format("woff");
 }
-@font-face {
+@font-face{
   font-family: Roboto;
   font-style: italic;
   font-weight: 500;
   src: local("Roboto Medium Italic"),local(Roboto-MediumItalic),url(//fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51S7ACc6CsA.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51S7ACc6CsQ.woff2) format("woff2"),url(//fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51S7ACc6CsI.woff) format("woff");
 }
-@font-face {
+@font-face{
   font-family: Roboto;
   font-style: italic;
   font-weight: 700;
   src: local("Roboto Bold Italic"),local(Roboto-BoldItalic),url(//fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51TzBic6CsA.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51TzBic6CsQ.woff2) format("woff2"),url(//fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51TzBic6CsI.woff) format("woff");
 }
-@font-face {
+@font-face{
   font-family: Roboto;
   font-style: italic;
   font-weight: 900;
   src: local("Roboto Black Italic"),local(Roboto-BlackItalic),url(//fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51TLBCc6CsA.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51TLBCc6CsQ.woff2) format("woff2"),url(//fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51TLBCc6CsI.woff) format("woff");
 }
-@font-face {
+@font-face{
   font-family: Roboto;
   font-style: normal;
   font-weight: 100;
   src: local("Roboto Thin"),local(Roboto-Thin),url(//fonts.gstatic.com/s/roboto/v18/KFOkCnqEu92Fr1MmgVxIIzY.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v18/KFOkCnqEu92Fr1MmgVxIIzI.woff2) format("woff2"),url(//fonts.gstatic.com/s/roboto/v18/KFOkCnqEu92Fr1MmgVxIIzQ.woff) format("woff");
 }
-@font-face {
+@font-face{
   font-family: Roboto;
   font-style: normal;
   font-weight: 300;
   src: local("Roboto Light"),local(Roboto-Light),url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc8.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc4.woff2) format("woff2"),url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc-.woff) format("woff");
 }
-@font-face {
+@font-face{
   font-family: Roboto;
   font-style: normal;
   font-weight: 400;
   src: local(Roboto),local(Roboto-Regular),url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxO.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxK.woff2) format("woff2"),url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxM.woff) format("woff");
 }
-@font-face {
+@font-face{
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
   src: local("Roboto Medium"),local(Roboto-Medium),url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBBc8.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBBc4.woff2) format("woff2"),url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBBc-.woff) format("woff");
 }
-@font-face {
+@font-face{
   font-family: Roboto;
   font-style: normal;
   font-weight: 700;
   src: local("Roboto Bold"),local(Roboto-Bold),url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBBc8.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBBc4.woff2) format("woff2"),url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBBc-.woff) format("woff");
 }
-@font-face {
+@font-face{
   font-family: Roboto;
   font-style: normal;
   font-weight: 900;
   src: local("Roboto Black"),local(Roboto-Black),url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmYUtfBBc8.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmYUtfBBc4.woff2) format("woff2"),url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmYUtfBBc-.woff) format("woff");
 }
-/*
-Root vars. STANDARD FONTS AND COLORS 
-*/
-figure {
-  width: 100%;
-  height: auto;
-  padding: 0;
-  margin: 0;
+@font-face{
+  font-family: Palanquin;
+  font-style: normal;
+  font-weight: 100;
+  src: local("Palanquin Thin"),local(Palanquin-Thin),url(//fonts.gstatic.com/s/palanquin/v3/9XUhlJ90n1fBFg7ceXwUEmtP5LA.eot?#) format("eot"),url(//fonts.gstatic.com/s/palanquin/v3/9XUhlJ90n1fBFg7ceXwUEmtP5LQ.woff2) format("woff2"),url(//fonts.gstatic.com/s/palanquin/v3/9XUhlJ90n1fBFg7ceXwUEmtP5LI.woff) format("woff");
 }
-
-figure img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  padding: 0;
-  margin: 0;
-  object-fit: contain;
+@font-face{
+  font-family: Palanquin;
+  font-style: normal;
+  font-weight: 200;
+  src: local("Palanquin ExtraLight"),local(Palanquin-ExtraLight),url(//fonts.gstatic.com/s/palanquin/v3/9XUilJ90n1fBFg7ceXwUvnpYw5Gv.eot?#) format("eot"),url(//fonts.gstatic.com/s/palanquin/v3/9XUilJ90n1fBFg7ceXwUvnpYw5Gr.woff2) format("woff2"),url(//fonts.gstatic.com/s/palanquin/v3/9XUilJ90n1fBFg7ceXwUvnpYw5Gt.woff) format("woff");
 }
-
+@font-face{
+  font-family: Palanquin;
+  font-style: normal;
+  font-weight: 300;
+  src: local("Palanquin Light"),local(Palanquin-Light),url(//fonts.gstatic.com/s/palanquin/v3/9XUilJ90n1fBFg7ceXwU2nlYw5Gv.eot?#) format("eot"),url(//fonts.gstatic.com/s/palanquin/v3/9XUilJ90n1fBFg7ceXwU2nlYw5Gr.woff2) format("woff2"),url(//fonts.gstatic.com/s/palanquin/v3/9XUilJ90n1fBFg7ceXwU2nlYw5Gt.woff) format("woff");
+}
+@font-face{
+  font-family: Palanquin;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Palanquin Regular"),local(Palanquin-Regular),url(//fonts.gstatic.com/s/palanquin/v3/9XUnlJ90n1fBFg7ceXwccVtJ.eot?#) format("eot"),url(//fonts.gstatic.com/s/palanquin/v3/9XUnlJ90n1fBFg7ceXwccVtN.woff2) format("woff2"),url(//fonts.gstatic.com/s/palanquin/v3/9XUnlJ90n1fBFg7ceXwccVtL.woff) format("woff");
+}
+@font-face{
+  font-family: Palanquin;
+  font-style: normal;
+  font-weight: 500;
+  src: local("Palanquin Medium"),local(Palanquin-Medium),url(//fonts.gstatic.com/s/palanquin/v3/9XUilJ90n1fBFg7ceXwUgnhYw5Gv.eot?#) format("eot"),url(//fonts.gstatic.com/s/palanquin/v3/9XUilJ90n1fBFg7ceXwUgnhYw5Gr.woff2) format("woff2"),url(//fonts.gstatic.com/s/palanquin/v3/9XUilJ90n1fBFg7ceXwUgnhYw5Gt.woff) format("woff");
+}
+@font-face{
+  font-family: Palanquin;
+  font-style: normal;
+  font-weight: 600;
+  src: local("Palanquin SemiBold"),local(Palanquin-SemiBold),url(//fonts.gstatic.com/s/palanquin/v3/9XUilJ90n1fBFg7ceXwUrn9Yw5Gv.eot?#) format("eot"),url(//fonts.gstatic.com/s/palanquin/v3/9XUilJ90n1fBFg7ceXwUrn9Yw5Gr.woff2) format("woff2"),url(//fonts.gstatic.com/s/palanquin/v3/9XUilJ90n1fBFg7ceXwUrn9Yw5Gt.woff) format("woff");
+}
+@font-face{
+  font-family: Palanquin;
+  font-style: normal;
+  font-weight: 700;
+  src: local("Palanquin Bold"),local(Palanquin-Bold),url(//fonts.gstatic.com/s/palanquin/v3/9XUilJ90n1fBFg7ceXwUyn5Yw5Gv.eot?#) format("eot"),url(//fonts.gstatic.com/s/palanquin/v3/9XUilJ90n1fBFg7ceXwUyn5Yw5Gr.woff2) format("woff2"),url(//fonts.gstatic.com/s/palanquin/v3/9XUilJ90n1fBFg7ceXwUyn5Yw5Gt.woff) format("woff");
+}
+@charset "UTF-8";
 .footer form input[type=submit], .card__button {
   display: inline-block;
   text-align: center;
@@ -103,16 +133,14 @@ figure img {
   font-weight: 300;
 }
 
-.row {
-  display: grid;
-  grid-template-columns: minmax(3vw, 1fr) minmax(auto, 1200px) minmax(3vw, 1fr);
-  width: 100%;
+.hidden {
+  visibility: collapse;
 }
 
 html {
   line-height: 1.5;
-  box-sizing: border-box;
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 html {
@@ -131,20 +159,22 @@ html {
   }
 }
 
-body {
-  font-family: "Roboto", sans-serif;
-  padding: 0;
-  margin: 0;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  font-smooth: auto;
-}
-
 *,
 :before,
 :after {
   box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smooth: antialiased;
+  font-family: "Palanquin", sans-serif;
+  color: #111;
+  text-rendering: optimizeLegibility;
+  font-smooth: auto;
 }
 
 h1 {
@@ -206,8 +236,9 @@ figure img {
   object-fit: contain;
 }
 
-.filler {
-  height: 100vh;
+p {
+  font-weight: 300;
+  color: #111;
 }
 
 .navbar li, .navbar__open-button {
@@ -215,10 +246,10 @@ figure img {
   border-radius: 100%;
   width: 5rem;
   height: 5rem;
-  position: absolute;
+  position: fixed;
   color: white;
   text-align: center;
-  left: calc(50% - 2.5rem);
+  left: calc(100% - 7.5rem);
   top: calc(50% - 2.5rem);
   transform: translate3d(0, 0, 0);
   transition: transform 150ms;
@@ -227,12 +258,50 @@ figure img {
 }
 
 .main-nav {
-  margin: 50px 0;
+  margin: 0;
   padding: 0;
   position: fixed;
   width: 100%;
   bottom: 0;
   height: 9rem;
+  z-index: 50;
+}
+
+.main-nav:before {
+  position: fixed;
+  content: '';
+  z-index: 0;
+  color: transparent;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.main-nav.overlay:before {
+  position: fixed;
+  content: 'Svært at vælge?';
+  font-family: "Frijole", "Palanquin", sans-serif;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 4.6875rem;
+  z-index: 0;
+  padding: 80vh 0 0 2.34375rem;
+  text-align: left;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: radial-gradient(circle at 80% top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7) 50%);
+  opacity: 1;
+  transition: opacity 15s;
+}
+
+@media (max-width: 1024px) {
+  .main-nav.overlay:before {
+    background: radial-gradient(circle at 50% 90%, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7) 50%);
+    padding: 5vh 0 0 0;
+    text-align: center;
+  }
 }
 
 @media (min-width: 1025px) {
@@ -241,10 +310,20 @@ figure img {
   }
 }
 
+@keyframes rad-gradient-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .navbar {
+  font-family: "Noto Color Emoji", "Palanquin", sans-serif;
   height: auto;
   display: inline-block;
-  width: 34.375rem;
+  width: 100%;
   height: 100%;
   margin: 0;
   padding: 10px 0;
@@ -272,7 +351,7 @@ figure img {
   text-decoration: none;
 }
 
-.navbar li span {
+.navbar li span.burger-layer {
   width: 1.5625rem;
   height: 0.1875rem;
   background: #E7E7E7;
@@ -285,20 +364,20 @@ figure img {
   transition: transform 200ms;
 }
 
-.navbar li span:nth-child(1) {
+.navbar li span.burger-layer:nth-child(1) {
   transform: translate3d(0, -0.5rem, 0);
 }
 
-.navbar li span:nth-child(2) {
+.navbar li span.burger-layer:nth-child(2) {
   transform: translate3d(0, 0, 0);
 }
 
-.navbar li span:nth-child(3) {
+.navbar li span.burger-layer:nth-child(3) {
   transform: translate3d(0, 0.5rem, 0);
 }
 
 .navbar__open-button {
-  z-index: 200;
+  z-index: 100;
   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   /* custom */
   transition-duration: 400ms;
@@ -343,85 +422,57 @@ figure img {
   transition: clip-path 200ms;
 }
 
-@keyframes playMenu {
-  0% {
-    background-position: 0px 0px;
-  }
-  100% {
-    background-position: -4320px 0px;
-  }
-}
-
 .navbar--open li {
-  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  left: calc(50% - 2.5rem);
 }
 
 .navbar--open li:nth-child(1) {
   /* left */
-  transition-duration: 730ms;
-  transform: translate3d(-15rem, 1.25rem, 0);
+  transition-duration: 570ms;
+  transform: translate3d(-10rem, 0.625rem, 0);
 }
 
 .navbar--open li:nth-child(2) {
   /* left */
-  transition-duration: 650ms;
-  transform: translate3d(-10rem, 0.625rem, 0);
+  transition-duration: 490ms;
+  transform: translate3d(-5rem, 0rem, 0);
 }
 
-.navbar--open li:nth-child(3) {
-  /* left */
-  transition-duration: 570ms;
-  transform: translate3d(-5rem, 0rem, 0);
+.navbar--open li:nth-child(4) {
+  /* right */
+  transition-duration: 490ms;
+  transform: translate3d(5rem, 0rem, 0);
 }
 
 .navbar--open li:nth-child(5) {
   /* right */
   transition-duration: 570ms;
-  transform: translate3d(5rem, 0rem, 0);
-}
-
-.navbar--open li:nth-child(6) {
-  /* right */
-  transition-duration: 650ms;
   transform: translate3d(10rem, 0.625rem, 0);
 }
 
-.navbar--open li:nth-child(7) {
-  /* right */
-  transition-duration: 730ms;
-  transform: translate3d(15rem, 1.25rem, 0);
-}
-
 @media (min-width: 1025px) {
+  .navbar--open li {
+    left: calc(100% - 17.5rem);
+  }
   .navbar--open li:nth-child(1) {
     /* left */
-    transition-duration: 730ms;
-    transform: translate3d(-15rem, -1.25rem, 0);
+    transition-duration: 570ms;
+    transform: translate3d(-10rem, -0.625rem, 0);
   }
   .navbar--open li:nth-child(2) {
     /* left */
-    transition-duration: 650ms;
-    transform: translate3d(-10rem, -0.625rem, 0);
-  }
-  .navbar--open li:nth-child(3) {
-    /* left */
-    transition-duration: 570ms;
+    transition-duration: 490ms;
     transform: translate3d(-5rem, 0rem, 0);
+  }
+  .navbar--open li:nth-child(4) {
+    /* right */
+    transition-duration: 490ms;
+    transform: translate3d(5rem, 0rem, 0);
   }
   .navbar--open li:nth-child(5) {
     /* right */
     transition-duration: 570ms;
-    transform: translate3d(5rem, 0rem, 0);
-  }
-  .navbar--open li:nth-child(6) {
-    /* right */
-    transition-duration: 650ms;
     transform: translate3d(10rem, -0.625rem, 0);
-  }
-  .navbar--open li:nth-child(7) {
-    /* right */
-    transition-duration: 730ms;
-    transform: translate3d(15rem, -1.25rem, 0);
   }
 }
 

@@ -1,74 +1,109 @@
 // $menu-color: #bada55;
-$menu-color: kidColor('4', $kid-color-theme3);
+$menu-color: kidColor('4', $kid-color-theme3) !default;
 
 // $menu-active-color: #fada77;
-$menu-active-color: tint(kidColor('1', $kid-color-theme2), 50%);
+$menu-active-color: tint(kidColor('1', $kid-color-theme2), 50%) !default;
 
 // $burger-color: rgb(48, 77, 116);
-$burger-color: kidColor('3', $kid-color-theme2);
+$burger-color: kidColor('3', $kid-color-theme2) !default;
 
-$menu-items: 6;
+$menu-items: 4 !default;
 
-$menu-item-size: 80px;
+$menu-item-size: 80px !default;
 
-$menu-item-gap: 0px;
+$menu-item-gap: 0 !default;
 
-$burger-size: $menu-item-size / 2 + 10px;
+$burger-size: $menu-item-size / 2 + 10px !default; 
 
-$pix-dir: 10px;
+$pix-dir: 10px !default;
 
-$start-at-menu: true;
-
-// body {
-//     // background: #999
-// }
-
-.filler {
-    height: 100vh;
-}
-
-// @font-face {
-//     font-family: 'Noto Color Emoji';
-//     src: local('Noto Color Emoji'),
-//            url("../font/NotoColorEmoji.ttf") format("ttf");
-// }
-
-// @font-face {
-//     font-family: MyHelvetica;
-//     src: local("Helvetica Neue Bold"),
-//          local("HelveticaNeue-Bold"),
-//          url(MgOpenModernaBold.ttf);
-//     font-weight: bold;
-//   }
+$start-at-menu: true !default;
 
 %ball {
     background-color: $menu-color;
     border-radius: 100%;
     // width: px2rem(80px);
     // height: px2rem(80px);
+    // z-index: 0;
     width: px2rem($menu-item-size);
     height: px2rem($menu-item-size);
-    position: absolute;
+    position: fixed;
     color: white;
     text-align: center;
-    left: calc(50% - #{px2rem($menu-item-size / 2)});
+    // left: calc(50% - #{px2rem($menu-item-size / 2)});
+    left: calc(100% - #{px2rem($menu-item-size * 1.5)});
     top: calc(50% - #{px2rem($menu-item-size / 2)});
     transform: translate3d(0, 0, 0);
     transition: transform 150ms;
     transition-timing-function: cubic-bezier(0.480, -0.600, 0.345, 1.295);
+    // transition-delay: 1s;
     /* custom */
 }
 
 
 .main-nav {
-    margin: 50px 0;
+    // margin: 50px 0;
+    margin: 0;
     padding: 0;
     // width: 100%;
     position: fixed;
     width: 100%;
     bottom: 0;
     height: px2rem($menu-item-size * 1.8);
+    z-index: 50;
+    
+    // &:not(.overlay):before {
+    &:before {
+        position: fixed;
+        content: '';
+        z-index: 0;
+        // width: 100%;
+        // height: 100%;
+        color: transparent;
+        top: 0;
+        // bottom: 0;
+        // left: 0;
+        right: 0;
+        // background: radial-gradient(transparent, rgba(0,0,0,0.5));
+        // background: radial-gradient(circle at 75% top, #333, #333 50%, #eee 75%, #333 75%);
+        // background: transparent;
+        opacity: 0;
+        transition: opacity 1s;
+        // animation-duration: 500ms;
+        // filter: none;
+        // animation: rad-gradient-fade 300ms ease 1 backwards;
+    }
 
+    &.overlay {
+        &:before {
+            position: fixed;
+            content: 'Svært at vælge?';
+            // font-family: 'Fredericka the Great', sans-serif;
+            // font-family: 'Cabin Sketch', $main-font;
+            // font-family: 'Press Start 2P', $main-font;
+            font-family: 'Frijole', $main-font;
+            // font-family: 'Hanalei', sans-serif;
+            // font-family: 'Freckle Face', sans-serif;
+            // font-family: 'Irish Grover', sans-serif;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: px2rem(75);
+            z-index: 0;
+            padding: 80vh 0 0 px2rem(75/2);
+            text-align: left;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: radial-gradient(circle at 80% top, rgba(0,0,0,0), rgba(0,0,0,0.7) 50%);
+            opacity: 1;
+            transition: opacity 15s;
+            @include media('<=desktop') {
+                background: radial-gradient(circle at 50% 90%, rgba(0,0,0,0), rgba(0,0,0,0.7) 50%);
+                padding: 5vh 0 0 0;
+                text-align: center;
+            }
+        }
+    }
     // $min-width: $tablet-width;
     // $max-width: $desktop-width;
     // $min-font: 12px;
@@ -80,11 +115,23 @@ $start-at-menu: true;
     }
 }
 
-.navbar {
+@keyframes rad-gradient-fade {
+    from {
+        // background: radial-gradient(circle at 75% top, rgba(0,0,0,0), rgba(0,0,0,0.0) 50%);
+        opacity: 0;
+    }
+    to {
+        // background: radial-gradient(circle at 75% top, rgba(0,0,0,0), rgba(0,0,0,0.7) 50%);
+        opacity: 1;
+    }
+}
 
+.navbar {
+    font-family: 'Noto Color Emoji', $main-font;
     height: auto;
     display: inline-block;
-    width: px2rem(($menu-item-size * ($menu-items + 1) - 10px));
+    // width: px2rem(($menu-item-size * ($menu-items + 1) - 10px));
+    width: 100%;
     // width: 100%;
     height: 100%;
     margin: 0;
@@ -93,10 +140,15 @@ $start-at-menu: true;
     // left: calc(50% - #{px2rem(($menu-item-size * $menu-items + 1) / 2)});
     left: 50%;
     transform: translateX(-50%);
+    // left: 100%;
+    // transform: translateX(-100%);
+    // filter: url('#shadowed-goo');
     filter: url('#shadowed-goo');
     box-sizing: border-box;
     font-size: px2rem(20px);
     text-align: left;
+
+    
 
 
     li {
@@ -118,7 +170,7 @@ $start-at-menu: true;
             text-decoration: none;
         }
 
-        span {
+        span.burger-layer {
             $width: 25px;
             $height: 3px;
             width: px2rem($width);
@@ -178,7 +230,7 @@ $start-at-menu: true;
     &__open-button {
         @extend %ball;
         // transition-timing-function:cubic-bezier(0.175, 0.885, 0.320, 1.275);
-        z-index: 200;
+        z-index: 100;
         // transition-timing-function: cubic-bezier(0.480, -0.600, 0.515, 1.580);
         transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275);
         /* custom */
@@ -186,6 +238,7 @@ $start-at-menu: true;
         // transform:scale(1.1,1.1) translate3d(0,0,0);
         cursor: pointer;
         line-height: 100%;
+        
     
         span {
             $width: 25px;
@@ -229,42 +282,21 @@ $start-at-menu: true;
     }
 }
 
-// .logo {
-
-// .playMenu {
-//     background-color: $menu-active-color;
-
-//     svg {
-
-//         path#top,
-//         path#bottom {
-//             stroke-dashoffset: -650px;
-//             stroke-dashoffset: -650px;
-//         }
-
-//         path#middle {
-//             stroke-dashoffset: -115px;
-//             stroke-dasharray: 1px 220px;
-//         }
-//     }
-// }
-
-
-@keyframes playMenu {
-    0% {
-        background-position: 0px 0px;
-    }
-
-    100% {
-        background-position: -4320px 0px;
-    }
-}
 
 // $real-menu-items: $menu-items + 1;
 .navbar--open {
+    // left: 50%;
+    // transform: translateX(-50%);
+
     li {
         // transition-timing-function: cubic-bezier(0.480, -0.600, 0.345, 1.295);
-        transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+        // transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+        left: calc(50% - #{px2rem($menu-item-size / 2)});
+        // transition: left 1s;
+        
+        // transition-property: left;
+        // transition-delay: 1s;
+
 
         @for $i from 1 through $menu-items+1 {
             @if $i <= ($menu-items / 2) {
@@ -308,9 +340,15 @@ $start-at-menu: true;
         }
 
         @include media('>desktop') {
+
+            & {
+                // left: calc(100% - #{px2rem(($menu-item-size * $menu-items) - ($menu-item-size * 1.5))});
+                left: calc(100% - #{px2rem(($menu-item-size * $menu-items - ($menu-item-size / 2)))});
+            }
+
             $pix-dir: -$pix-dir;
 
-            @for $i from 1 through $menu-items+1 {
+            @for $i from 1 through $menu-items + 1 {
                 @if $i <= ($menu-items / 2) {
                     &:nth-child(#{$i}) {
                         /* left */

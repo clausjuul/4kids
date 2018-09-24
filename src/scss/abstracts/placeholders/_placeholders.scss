@@ -1,19 +1,4 @@
-// figure img
-figure {
-    width: 100%;
-    height: auto;
-    padding: 0;
-    margin: 0;
 
-    img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        padding: 0;
-        margin: 0;
-        object-fit: contain;
-    }
-}
 
 %button {
     display: inline-block;
@@ -52,7 +37,11 @@ figure {
     text-decoration: none;
 }
 
-%row {
-    @include is-grid-container('minmax(3vw, 1fr) minmax(auto, 1200px) minmax(3vw, 1fr)');
-    width: 100%;
+%hidden {
+    visibility: collapse;
+    // position: absolute;
+    // width: 0;
+    // height: 0;
+    // margin: 0;
+    // padding: 0;
 }
