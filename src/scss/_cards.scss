@@ -16,6 +16,9 @@
     display: flex;
     flex-direction: column;
     background: #eee;
+
+
+    
     border-radius: $cards__border-radius;
     // box-shadow: 0 5px 15px -3px rgba(44, 44, 44, 0.234);
     // padding: 1rem;
@@ -25,6 +28,10 @@
         display: block;
         width: 100%;
         height: auto;
+
+
+
+
         position: relative;
         // overflow: hidden;
         padding: 66% 0 0 0;
