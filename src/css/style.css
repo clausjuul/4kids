@@ -138,6 +138,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  font-smooth: auto;
 }
 
 *,
@@ -151,18 +152,6 @@ h1 {
   font-weight: 300;
   color: #f1f1f1;
   margin: 0.67em 0 0.34em 0;
-}
-
-body {
-  padding: 0;
-  margin: 0;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smooth: antialiased;
-  font-family: "Noto Color Emoji", "Noto Sans", sans-serif;
-  color: get-color(tri3);
-  text-rendering: optimizeLegibility;
-  font-smooth: auto;
 }
 
 h2 {
@@ -594,7 +583,7 @@ figure img {
 }
 
 .card hr {
-  width: calc(100% - ($smallspacing * 2));
+  width: calc(100% - 4rem);
   margin: 0 2rem;
   opacity: .17;
 }
